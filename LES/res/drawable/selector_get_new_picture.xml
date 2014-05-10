@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/image_no_photo"
+        android:state_pressed="false"></item>
+
+    <item android:drawable="@drawable/image_no_photo_touch"
+        android:state_pressed="true"></item>
+</selector>
