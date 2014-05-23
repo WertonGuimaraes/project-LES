@@ -1,4 +1,4 @@
-﻿Projeto de LES: (nome do projeto)
+Projeto de LES: (nome do projeto)
 ============
 
 O objetivo do software é ....
@@ -8,5 +8,3 @@ Grupo formado por:
     * Talita Lobo
     * Thalita Gonçalves
     * Werton Guimarães
-
-Alterando o README -Renan-
