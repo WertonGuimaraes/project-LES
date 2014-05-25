@@ -1,0 +1,83 @@
+package com.ufcg.les;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.util.Log;
+
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+/**
+ * 
+ * Classe responsável por transformar a resposta
+ * da requisição de recuperar Lojas ao servidor
+ * em uma lista de lojas que poderá ser usada
+ * pela aplicação. 
+ * 
+ * @author Erickson Santos
+ * @since Projeto 2
+ *
+ */
+public class GetTiHandler extends AsyncHttpResponseHandler {
+
+		private static final String NOME = "nome";
+		private static final String TEMPO = "tempo";
+		private static final String DATA = "data";
+		private static final String FOTO = "foto";
+		private static final String PRIORIDADE = "prioridade";
+
+        private List<Ti> Tis;
+       // private Listener listener;
+
+        public GetTiHandler(/*Listener r*/) {
+                //this.listener = r;
+        }
+
+        @Override
+        public void onSuccess(String response) {
+        	Log.d("werton", "Aqui");
+                List<Ti> Tis = new ArrayList<Ti>();
+                try {
+                        JSONArray array = new JSONArray(response);
+                        Log.d("werton", "array: " + array);
+                        for (int i = 0; i < array.length(); i++) {
+                        	Log.d("werton", ""+i);
+                                JSONObject item = array.getJSONObject(i);
+                                Log.d("werton", "criou");
+                                Tis.add(recuperaTi(item));
+                                Log.d("werton", "add");
+                        }
+                } catch (JSONException e) {
+                        e.printStackTrace();
+                }
+                this.Tis = Tis;
+                System.out.println("Tis: " + Tis.size());
+               // listener.notifica();
+        }
+
+        @Override
+        public void onFailure(Throwable t, String arg1) {
+        	Log.d("werton", "fail");
+        	t.printStackTrace();
+        }
+
+        private Ti recuperaTi(JSONObject item) throws JSONException {
+                Integer prioridade = (Integer) item.get(PRIORIDADE);
+                Integer tempo = (Integer) item.get(TEMPO);
+                String nome = item.getString(NOME);
+                String foto = item.getString(FOTO);
+                Long data = (Long) item.get(DATA);
+                
+                return new Ti(nome, tempo, data, foto, prioridade);
+        }
+
+        public List<Ti> getTis() {
+                return this.Tis;
+        }
+
+}

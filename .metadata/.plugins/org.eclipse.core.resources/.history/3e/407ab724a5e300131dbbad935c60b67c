@@ -1,0 +1,88 @@
+package com.ufcg.les;
+
+
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+
+import com.ufcg.les.R;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends Activity{
+	
+	private Button salvar, capturar;
+	private TextView resultTV;
+	private final String DONO = "werton007";
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+				
+		salvar = (Button) findViewById(R.id.salvarJSON);
+		capturar = (Button) findViewById(R.id.capturarJSON);
+		resultTV = (TextView) findViewById(R.id.result_JSON);
+		
+		salvar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				resultTV.setText("salvou");
+			}
+		});
+		
+		capturar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				new TiAsyncTask().execute(DONO);
+			}
+		});
+		
+		
+		
+	}
+	
+	public class TiAsyncTask extends AsyncTask<String, Void, List<Ti>> {
+		
+		private ProgressDialog dialog;
+		private List<Ti> Tis;
+		
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			dialog = ProgressDialog.show(MainActivity.this, "Espere", "Atualizando BD");
+		}
+
+		@Override
+		protected Void doInBackground(String... params) {
+			
+//			GetTiHandler tiHandler = new GetTiHandler();
+//			Connection.get("atividade/recuperaAtividades?dono=" + params[0], tiHandler);
+//			Log.d("werton", tiHandler.getTis().toString());
+//			return tiHandler.getTis();
+		}
+		
+		@Override
+		protected void onPostExecute(List<Ti> result) {
+			super.onPostExecute(result);
+			Log.d("werton", result.toString());
+//			resultTV.setText(String.valueOf(result.size()));
+		}
+		
+		
+		private void getJSON(){
+			JSONParse parser = new JSONParse(urlData);
+		}
+		
+	}
+	
+	
+}

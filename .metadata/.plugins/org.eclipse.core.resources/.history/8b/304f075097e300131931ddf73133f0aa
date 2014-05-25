@@ -1,0 +1,75 @@
+package com.ufcg.les;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.util.Base64;
+import br.edu.ufcg.model.Loja;
+
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+/**
+ * 
+ * Classe responsável por transformar a resposta
+ * da requisição de recuperar Lojas ao servidor
+ * em uma lista de lojas que poderá ser usada
+ * pela aplicação. 
+ * 
+ * @author Erickson Santos
+ * @since Projeto 2
+ *
+ */
+public class GetTiHandler extends AsyncHttpResponseHandler {
+
+		private static final String NOME = "nome";
+		private static final String TEMPO = "tempo";
+		private static final String DATA = "data";
+		private static final String FOTO = "foto";
+		private static final String PRIORIDADE = "prioridade";
+
+        private List<Ti> Tis;
+        private Listener listener;
+
+        public GetLojasHandler(Listener r) {
+                this.listener = r;
+        }
+
+        @Override
+        public void onSuccess(String response) {
+                List<Loja> Lojas = new ArrayList<Loja>();
+                try {
+                        JSONArray array = new JSONArray(response);
+                        for (int i = 0; i < array.length(); i++) {
+                                JSONObject item = array.getJSONObject(i);
+                                Lojas.add(recuperaLoja(item));
+                        }
+                } catch (JSONException e) {
+                        e.printStackTrace();
+                }
+                this.Tis = Lojas;
+                System.out.println("lojas: " + Tis);
+                listener.notifica();
+        }
+
+        @Override
+        public void onFailure(Throwable t, String arg1) {
+                t.printStackTrace();
+        }
+
+        private Ti recuperaLoja(JSONObject item) throws JSONException {
+                int id = item.getInt(PRIORIDADE);
+                String nomeLoja = item.getString(NOME_LOJA);
+                byte[] logoLoja = Base64.decode(item.getString(LOGO_LOJA), Base64.DEFAULT);
+                return new Ti(id, nomeLoja, logoLoja);
+        }
+
+        public List<Ti> getTis() {
+                return this.Tis;
+        }
+
+}

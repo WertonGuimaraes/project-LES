@@ -22,11 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity
-            android:name="com.ufcg.les.SumActivity"
-            android:label="@string/hello_world" >
-        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,15 @@
+package com.ufcg.les;
+
+public class AsyncHttpClient {
+
+	public void get(String string, AsyncHttpResponseHandler a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void get(String string, AsyncHttpResponseHandler a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

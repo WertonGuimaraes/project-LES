@@ -6,16 +6,25 @@
     android:orientation="vertical"
     tools:context="com.ufcg.les.MainActivity" >
 
+    
+    
+    
     <Button
-        android:id="@+id/Button_Sum"
+        android:id="@+id/salvarJSON"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sum" />
-
+        android:text="salvarJSON" />
+    
+    <Button
+        android:id="@+id/capturarJSON"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="capturarJSON" />
+    
     <TextView
-        android:id="@+id/result_sum"
+        android:id="@+id/result_JSON"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/error" />
+        android:text="" />
 
 </LinearLayout>
