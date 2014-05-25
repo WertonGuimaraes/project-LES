@@ -1,0 +1,67 @@
+package entities;
+
+import java.util.Date;
+
+public class Ti {
+	private String nome, foto; 
+	private Integer tempo, prioridade;
+	private Data data;
+	
+	/**
+	 * @param nome
+	 * @param tempo
+	 * @param data
+	 * @param foto
+	 * @param prioridade
+	 */
+	public Ti(String nome, Integer tempo, long data, String foto, Integer prioridade) {
+		this.nome = nome;
+		this.tempo = tempo;
+		this.data = data;
+		this.foto = foto;
+		this.prioridade = prioridade;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public int getTempo() {
+		return tempo;
+	}
+
+	public void setTempo(int tempo) {
+		this.tempo = tempo;
+	}
+
+	public int getPrioridade() {
+		return prioridade;
+	}
+
+	public void setPrioridade(int prioridade) {
+		this.prioridade = prioridade;
+	}
+
+	public Data getData() {
+		return data;
+	}
+
+	public void setData(Data data) {
+		this.data = data;
+	}
+	
+	
+
+}

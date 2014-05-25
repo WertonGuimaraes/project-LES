@@ -15,12 +15,6 @@
         android:layout_height="wrap_content"
         android:text="salvarJSON" />
     
-    <Button
-        android:id="@+id/capturarJSON"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="capturarJSON" />
-    
     <TextView
         android:id="@+id/result_JSON"
         android:layout_width="wrap_content"

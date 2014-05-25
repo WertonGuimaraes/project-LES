@@ -2,29 +2,28 @@ package com.ufcg.les;
 
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
-import com.ufcg.les.R;
-
-import entities.Ti;
 import JSON.JSONParse;
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import entities.Data;
+import entities.Ti;
 
 public class MainActivity extends Activity{
 	
-	private Button salvar, capturar;
+	private Button salvar;
 	private TextView resultTV;
 	private final String DONO = "werton007";
+	private ArrayList<Ti> TisDoUsuario;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,31 +31,28 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.activity_main);
 				
 		salvar = (Button) findViewById(R.id.salvarJSON);
-		capturar = (Button) findViewById(R.id.capturarJSON);
 		resultTV = (TextView) findViewById(R.id.result_JSON);
+		new TiAsyncTask().execute(DONO);
 		
 		salvar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				resultTV.setText("salvou");
 			}
 		});
-		
-		capturar.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				new TiAsyncTask().execute(DONO);
-			}
-		});
-		
-		
-		
 	}
+	
+	private void ListaTarefas() {
+		String name = "";
+		for (Ti ti : TisDoUsuario)
+			name += "Nome: " + ti.getNome() +", Tempo: " +ti.getTempo() + ", Data: " + ti.getData() +"\n";
+		resultTV.setText(name);
+	}
+	
+	
 	
 	public class TiAsyncTask extends AsyncTask<String, Void, Void> {
 		
 		private ProgressDialog dialog;
-		private ArrayList<Ti> TisDoUsuario;
 		
 		@Override
 		protected void onPreExecute() {
@@ -73,7 +69,7 @@ public class MainActivity extends Activity{
 		@Override
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
-			resultTV.setText("Total de Tis: " + TisDoUsuario.size());
+			ListaTarefas();
 			dialog.dismiss();
 		}		
 		
@@ -81,8 +77,5 @@ public class MainActivity extends Activity{
 			JSONParse parser = new JSONParse("http://150.165.98.11:8080/povmt/atividade/recuperaAtividades?dono="+dono);
 			return parser.TiPars();
 		}
-		
 	}
-	
-	
 }

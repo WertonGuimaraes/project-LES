@@ -1,9 +1,14 @@
 package entities;
 
+import java.util.Calendar;
+import java.util.Date;
+
+import entities.Data;;
+
 public class Ti {
 	private String nome, foto; 
 	private Integer tempo, prioridade;
-	private Long data;
+	private Date data;
 	
 	/**
 	 * @param nome
@@ -12,10 +17,11 @@ public class Ti {
 	 * @param foto
 	 * @param prioridade
 	 */
-	public Ti(String nome, Integer tempo, Long data, String foto, Integer prioridade) {
+	public Ti(String nome, Integer tempo, Long dataMilisegundos, String foto, Integer prioridade) {
 		this.nome = nome;
 		this.tempo = tempo;
-		this.data = data;
+		this.data = new Date();
+		this.data.setTime(dataMilisegundos);
 		this.foto = foto;
 		this.prioridade = prioridade;
 	}
@@ -52,14 +58,11 @@ public class Ti {
 		this.prioridade = prioridade;
 	}
 
-	public long getData() {
+	public Date getData() {
 		return data;
 	}
 
-	public void setData(long data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
-	
-	
-
 }
