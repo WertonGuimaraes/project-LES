@@ -1,5 +1,0 @@
-INDEX VERSION 1.126+C:\Users\Werton\UFCG\project-LES\.metadata\.plugins\org.eclipse.jdt.core
-709417455.index
-2792595628.index
-3938661636.index
-2273994405.index
