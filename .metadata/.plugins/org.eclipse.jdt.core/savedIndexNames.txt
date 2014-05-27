@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/home/wertonguimaraes/Área de Trabalho/GIT/project-LES/.metadata/.plugins/org.eclipse.jdt.core
-779851164.index
-3757682654.index
