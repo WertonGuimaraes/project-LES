@@ -61,25 +61,30 @@ public final class R {
         public static final int text_field=0x7f02001d;
     }
     public static final class id {
-        public static final int action_settings=0x7f090002;
-        public static final int result_JSON=0x7f090001;
-        public static final int salvarJSON=0x7f090000;
+        public static final int BotaoCancelar=0x7f090006;
+        public static final int Button_AddTI=0x7f090000;
+        public static final int action_settings=0x7f090007;
+        public static final int botaoOK=0x7f090005;
+        public static final int hours=0x7f090003;
+        public static final int minutes=0x7f090004;
+        public static final int name_ti=0x7f090002;
+        public static final int teste=0x7f090001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int adicionar_ti=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int add_ti=0x7f060004;
         public static final int app_name=0x7f060000;
-        public static final int cancel=0x7f060007;
-        public static final int error=0x7f060004;
-        public static final int hello_world=0x7f060002;
-        public static final int number=0x7f060006;
-        public static final int result=0x7f060005;
-        public static final int sum=0x7f060003;
+        public static final int cancel=0x7f060003;
+        public static final int hours=0x7f060005;
+        public static final int minutes=0x7f060006;
+        public static final int ok=0x7f060002;
     }
     public static final class style {
         /** 

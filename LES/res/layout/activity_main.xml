@@ -6,19 +6,16 @@
     android:orientation="vertical"
     tools:context="com.ufcg.les.MainActivity" >
 
-    
-    
-    
     <Button
-        android:id="@+id/salvarJSON"
+        android:id="@+id/Button_AddTI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="salvarJSON" />
-    
+        android:text="@string/add_ti" />
+
     <TextView
-        android:id="@+id/result_JSON"
+        android:id="@+id/teste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text="TextView" />
 
 </LinearLayout>
