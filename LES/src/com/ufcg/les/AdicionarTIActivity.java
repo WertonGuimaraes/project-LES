@@ -20,7 +20,7 @@ import android.widget.NumberPicker;
 public class AdicionarTIActivity extends Activity { 
 	
 	//Definidas inicialmente para depois serem implementadas.
-	private static final String DONO = "xpto";
+	private static final String DONO = MainActivity.getDONO();
 	private static final int PRIORIDADE = 0;
 	private static final String FOTO = null;
 	
@@ -65,7 +65,7 @@ public class AdicionarTIActivity extends Activity {
 				tempo = horas.getValue()*60 + minutos.getValue();
 				Data d = new Data();
 				String data = String.valueOf(d.convertDateToMilissegundos());
-				new SalvaJSON().execute(MainActivity.getDONO(), nome.getText().toString(), String.valueOf(tempo), data);
+				new SalvaJSON().execute(DONO, nome.getText().toString(), String.valueOf(tempo), data);
 			}
 		});
 	}
@@ -76,8 +76,7 @@ public class AdicionarTIActivity extends Activity {
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			dialog = ProgressDialog.show(AdicionarTIActivity.this, "Espere",
-					"Salvando BD");
+			dialog = ProgressDialog.show(AdicionarTIActivity.this, "Espere", "Salvando BD");
 		}
 		
 		@Override

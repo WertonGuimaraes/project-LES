@@ -52,7 +52,6 @@ public class DataBaseStorage {
 		public void onCreate(SQLiteDatabase db) {
 
 			db.execSQL(TEMPO_INVESTIDO_CREATE_TABLE);
-
 			Log.w("DataBaseStorage", "DB created sucefully!");
 		}
 

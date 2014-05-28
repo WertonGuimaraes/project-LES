@@ -71,16 +71,18 @@ public class JSONParse {
 	public ArrayList<Ti> TiPars() {
 		ArrayList<Ti> temposInvestidos = new ArrayList<Ti>();
 
-		for (int i = 0; i < json.length(); i++) {
-			JSONObject item;
-			try {
-				item = json.getJSONObject(i);
-				temposInvestidos.add(recuperaTi(item));
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		if(json != null){
+			for (int i = 0; i < json.length(); i++) {
+				JSONObject item;
+				try {
+					item = json.getJSONObject(i);
+					temposInvestidos.add(recuperaTi(item));
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	
 			}
-
 		}
 
 		return temposInvestidos;
