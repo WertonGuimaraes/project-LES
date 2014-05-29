@@ -1,31 +1,26 @@
 package com.ufcg.les;
 
-import java.util.ArrayList;
-
-import com.ufcg.entities.Data;
-import com.ufcg.entities.Ti;
-import com.ufcg.json.JSONParse;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 
+import com.ufcg.entities.Data;
+import com.ufcg.entities.Ti;
+import com.ufcg.json.JSONParse;
+
 public class AdicionarTIActivity extends Activity { 
 	
 	//Definidas inicialmente para depois serem implementadas.
-	private static final String DONO = MainActivity.getDONO();
+	private static final String DONO = Session.getInstancia().getDono();
 	private static final int PRIORIDADE = 0;
 	private static final String FOTO = null;
 	
-	
-	private ArrayList<Ti> TisDoUsuario = MainActivity.getTisDoUsuario();
 	private int tempo;
 	NumberPicker horas, minutos;
 	
@@ -40,7 +35,6 @@ public class AdicionarTIActivity extends Activity {
 			@Override
 	        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
 				horas.setValue(newVal);
-	            Log.d("werton", String.valueOf(horas.getValue()));
 	        }
 	    });
 		
@@ -52,7 +46,6 @@ public class AdicionarTIActivity extends Activity {
 			@Override
 	        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
 				minutos.setValue(newVal);
-	            Log.d("werton", String.valueOf(minutos.getValue()));
 	        }
 	    });
 		
@@ -92,8 +85,7 @@ public class AdicionarTIActivity extends Activity {
 			String nome = result[1];
 			Integer tempo = Integer.parseInt(result[2]);
 			Long data = (long) Double.parseDouble(result[3]);
-			
-			TisDoUsuario.add(new Ti(nome, tempo, data, FOTO, PRIORIDADE));
+			Session.getInstancia().getAtividades().add(new Ti(nome, tempo, data, FOTO, PRIORIDADE));
 			dialog.dismiss();
 		}
 
@@ -102,9 +94,13 @@ public class AdicionarTIActivity extends Activity {
 			new JSONParse(url);
 		}
 
-		
+	}
+	
+	@Override
+	public void onBackPressed() {
+		Intent intent = new Intent(AdicionarTIActivity.this, MainActivity.class);
+		startActivity(intent);
 
-		
-		
+		finish();
 	}
 }

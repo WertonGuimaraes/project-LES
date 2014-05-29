@@ -63,16 +63,22 @@ public final class R {
     public static final class id {
         public static final int BotaoCancelar=0x7f090006;
         public static final int Button_AddTI=0x7f090000;
-        public static final int action_settings=0x7f090007;
+        public static final int action_settings=0x7f09000c;
         public static final int botaoOK=0x7f090005;
+        public static final int buttonLogar=0x7f09000b;
         public static final int hours=0x7f090003;
+        public static final int login=0x7f090008;
         public static final int minutes=0x7f090004;
         public static final int name_ti=0x7f090002;
+        public static final int senha=0x7f09000a;
         public static final int teste=0x7f090001;
+        public static final int textView1=0x7f090009;
+        public static final int textView2=0x7f090007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int adicionar_ti=0x7f030001;
+        public static final int login=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f080000;
