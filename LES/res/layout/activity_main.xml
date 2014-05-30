@@ -11,11 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_ti" />
-
-    <TextView
-        android:id="@+id/teste"
-        android:layout_width="wrap_content"
+    
+    <Button
+        android:id="@+id/Button_ViewWeek"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Ver semana" />
+
+    
 
 </LinearLayout>

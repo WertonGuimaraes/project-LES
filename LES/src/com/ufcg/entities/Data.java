@@ -21,7 +21,7 @@ public class Data {
 		this.data = new GregorianCalendar(ano, mes, dia);
 	}
 	
-	public long convertDateToMilissegundos(Calendar data){
+	public static long convertDateToMilissegundos(Calendar data){
 		return data.getTimeInMillis();
 	}
 	
@@ -43,20 +43,20 @@ public class Data {
 		return cal;
 	}
 	
-	public boolean isSemana(Data data){
+	public static boolean isSemana(Date date){
 		Data dataAtual = new Data();
 		long estremo1 = convertDateToMilissegundos(somarData(-6, dataAtual.getData()));
 		long estremo2 = convertDateToMilissegundos(somarData(1, dataAtual.getData()));
-		long dataParaComparacao = convertDateToMilissegundos(data.getData());
+		long dataParaComparacao = date.getTime();
 		
 		return estremo1 <= dataParaComparacao &&  dataParaComparacao< estremo2;
 	}
 	
-	public boolean is2SemanasPassada(Data data){
+	public static boolean is2SemanasPassada(Date date){
 		Data dataAtual = new Data();
 		long estremo1 = convertDateToMilissegundos(somarData(-20, dataAtual.getData()));
 		long estremo2 = convertDateToMilissegundos(somarData(-6, dataAtual.getData()));
-		long dataParaComparacao = convertDateToMilissegundos(data.getData());
+		long dataParaComparacao = date.getTime();
 		
 		return estremo1 <= dataParaComparacao &&  dataParaComparacao< estremo2;
 	}

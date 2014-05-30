@@ -33,6 +33,11 @@
             android:name="com.ufcg.les.AdicionarTIActivity"
             android:label="@string/app_name" >
         </activity>
+        
+        <activity
+            android:name="com.ufcg.les.Semana"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,10 +1,4 @@
-Projeto de LES: (nome do projeto)
+﻿Projeto de LES: POvMT
 ============
 
-O objetivo do software é ....
-
-Grupo formado por:
-    * Renan Pinto
-    * Talita Lobo
-    * Thalita Gonçalves
-    * Werton Guimarães
+Para configurar o projeto, é preciso que adicione o projeto HoloGraphLibrary como dependencia do Projeto principal.

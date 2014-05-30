@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 
 import com.ufcg.entities.Data;
+import com.ufcg.entities.Session;
 import com.ufcg.entities.Ti;
 import com.ufcg.json.JSONParse;
 
