@@ -3,6 +3,8 @@ package com.ufcg.les;
 import com.ufcg.entities.Session;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +42,31 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
+		openAlert("Logout", "Clique em OK para deslogar.");
+	}
+	
+	private void openAlert(String titulo, String mensagem) {
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+		alertDialogBuilder.setTitle(titulo);
+		alertDialogBuilder.setMessage(mensagem);
+		// set positive button: Yes message
+		alertDialogBuilder.setNegativeButton("Cancelar",new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog,int id) {
+				
+			}
+		});
+		alertDialogBuilder.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog,int id) {
+				// go to a new activity of the app
+				Intent backToPointsActivity = new Intent(getApplicationContext(), Login.class);
+				startActivity(backToPointsActivity);
+			}
+		});
+		
 
+		AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.show();
 	}
 }
