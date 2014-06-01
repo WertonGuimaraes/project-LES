@@ -2,18 +2,59 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res-auto">
     
-         <com.echo.holographlibrary.PieGraph
+    <TextView 
+       android:id="@+id/TextRelatorioSemanal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:textSize="25sp"
+       android:text="Relatório semanal"/>
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+         
+        <com.echo.holographlibrary.PieGraph
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/graph"/>
-   
+        
+    </LinearLayout>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+         <TextView 
+             android:id="@+id/TextTotalHoras"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:textSize="15sp"
+             android:text="Total de horas investidas: "/>
+         
+          <TextView 
+             android:id="@+id/TotalHoras"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="20sp"
+             android:layout_marginRight="15dp"
+             android:gravity="center"
+             android:text="40"/> <!-- depois sera alterado. So um exemplo -->
+         
+         
+        
+    </LinearLayout> 
 
     <!-- <com.echo.holographlibrary.BarGraph
         android:id="@+id/graph"
         android:layout_width="match_parent"
         android:layout_height="200dp" />  -->
+        
+       
 
 </LinearLayout>

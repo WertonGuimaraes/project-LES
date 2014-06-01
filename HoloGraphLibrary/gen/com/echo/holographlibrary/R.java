@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.ufcg.les;
+package com.echo.holographlibrary;
 
 public final class R {
     public static final class attr {
@@ -126,167 +126,12 @@ containing a value of this type.
          */
         public static int pieSlicePadding=0x7f010001;
     }
-    public static final class color {
-        public static int back_app=0x7f050003;
-        public static int bg_gray=0x7f050002;
-        public static int black_text=0x7f050004;
-        public static int blanchedAlmond=0x7f050006;
-        public static int blue=0x7f050007;
-        public static int blueviolet=0x7f050008;
-        public static int brown=0x7f050009;
-        public static int burlywood=0x7f05000a;
-        public static int cadetblue=0x7f05000b;
-        public static int chartreuse=0x7f05000c;
-        public static int chocolate=0x7f05000d;
-        public static int coral=0x7f05000e;
-        public static int cornflowerblue=0x7f05000f;
-        public static int cornsilk=0x7f050010;
-        public static int crimson=0x7f050011;
-        public static int cyan=0x7f050012;
-        public static int darkblue=0x7f050013;
-        public static int darkcyan=0x7f050014;
-        public static int darkgoldenrod=0x7f050015;
-        public static int darkgray=0x7f050016;
-        public static int darkgreen=0x7f050017;
-        public static int darkkhaki=0x7f050018;
-        public static int darkmagenta=0x7f050019;
-        public static int darkolivegreen=0x7f05001a;
-        public static int darkorange=0x7f05001b;
-        public static int darkorchid=0x7f05001c;
-        public static int darkred=0x7f05001d;
-        public static int darksalmon=0x7f05001e;
-        public static int darkseagreen=0x7f05001f;
-        public static int darkslateblue=0x7f050020;
-        public static int darkslategray=0x7f050021;
-        public static int darkturquoise=0x7f050022;
-        public static int darkviolet=0x7f050023;
-        public static int deeppink=0x7f050024;
-        public static int deepskyblue=0x7f050025;
-        public static int dimgray=0x7f050026;
-        public static int dodgerblue=0x7f050027;
-        public static int feldspar=0x7f050028;
-        public static int firebrick=0x7f050029;
-        public static int floralwhite=0x7f05002a;
-        public static int forestgreen=0x7f05002b;
-        public static int fuchsia=0x7f05002c;
-        public static int gainsboro=0x7f05002d;
-        public static int ghostwhite=0x7f05002e;
-        public static int gold=0x7f05002f;
-        public static int goldenrod=0x7f050030;
-        public static int transparent_white=0x7f050001;
-        public static int violet=0x7f050005;
-        public static int white=0x7f050000;
-    }
-    public static final class dimen {
-        /**  Default screen margins, per the Android Design guidelines. 
-
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
-    
-         */
-        public static int activity_horizontal_margin=0x7f060000;
-        public static int activity_vertical_margin=0x7f060001;
-    }
     public static final class drawable {
-        public static int augmentedlocation=0x7f020000;
-        public static int balloon=0x7f020001;
-        public static int bg=0x7f020002;
-        public static int footer=0x7f020003;
-        public static int ic_launcher=0x7f020004;
-        public static int icon=0x7f020005;
-        public static int icon_car=0x7f020006;
-        public static int icon_get_point=0x7f020007;
-        public static int icon_get_point_touch=0x7f020008;
-        public static int icon_local=0x7f020009;
-        public static int icon_point=0x7f02000a;
-        public static int icon_view_list=0x7f02000b;
-        public static int icon_view_map=0x7f02000c;
-        public static int icon_view_point=0x7f02000d;
-        public static int image1=0x7f02000e;
-        public static int image_no_photo=0x7f02000f;
-        public static int image_no_photo_small=0x7f020010;
-        public static int image_no_photo_touch=0x7f020011;
-        public static int line=0x7f020012;
-        public static int ok_button=0x7f020013;
-        public static int ok_button_touch=0x7f020014;
-        public static int popup_black=0x7f020015;
-        public static int selecao_list=0x7f020016;
-        public static int selecao_menu=0x7f020017;
-        public static int selector_get_current_position=0x7f020018;
-        public static int selector_get_new_picture=0x7f020019;
-        public static int selector_icons_main_menu=0x7f02001a;
-        public static int selector_ok_button=0x7f02001b;
-        public static int splash_screen=0x7f02001c;
-        public static int text_box=0x7f02001d;
-        public static int text_field=0x7f02001e;
+        public static int popup_black=0x7f020000;
     }
     public static final class id {
-        public static int BotaoCancelar=0x7f040008;
-        public static int Button_AddTI=0x7f040002;
-        public static int Button_ViewWeek=0x7f040003;
-        public static int TextRelatorioSemanal=0x7f04000e;
-        public static int TextTotalHoras=0x7f040010;
-        public static int TotalHoras=0x7f040011;
-        public static int action_settings=0x7f040012;
-        public static int botaoOK=0x7f040007;
-        public static int buttonLogar=0x7f04000d;
-        public static int graph=0x7f04000f;
-        public static int horizontal=0x7f040000;
-        public static int hours=0x7f040005;
-        public static int login=0x7f04000a;
-        public static int minutes=0x7f040006;
-        public static int name_ti=0x7f040004;
-        public static int senha=0x7f04000c;
-        public static int textView1=0x7f04000b;
-        public static int textView2=0x7f040009;
-        public static int vertical=0x7f040001;
-    }
-    public static final class layout {
-        public static int activity_main=0x7f030000;
-        public static int adicionar_ti=0x7f030001;
-        public static int login=0x7f030002;
-        public static int view_week=0x7f030003;
-    }
-    public static final class menu {
-        public static int main=0x7f090000;
-    }
-    public static final class string {
-        public static int action_settings=0x7f070001;
-        public static int add_ti=0x7f070004;
-        public static int app_name=0x7f070000;
-        public static int cancel=0x7f070003;
-        public static int hours=0x7f070005;
-        public static int minutes=0x7f070006;
-        public static int ok=0x7f070002;
-    }
-    public static final class style {
-        /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
-         */
-        public static int AppBaseTheme=0x7f080000;
-        public static int MyActionBar=0x7f080002;
-        public static int MyPopupMenu=0x7f080003;
-        /**  Application theme. 
-         */
-        public static int MyTheme=0x7f080001;
+        public static int horizontal=0x7f030000;
+        public static int vertical=0x7f030001;
     }
     public static final class styleable {
         /** Attributes that can be used with a BarGraph.
@@ -295,12 +140,12 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #BarGraph_barAxisColor com.ufcg.les:barAxisColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowAxis com.ufcg.les:barShowAxis}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowAxisLabel com.ufcg.les:barShowAxisLabel}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowPopup com.ufcg.les:barShowPopup}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowText com.ufcg.les:barShowText}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_orientation com.ufcg.les:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #BarGraph_barAxisColor com.echo.holographlibrary:barAxisColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #BarGraph_barShowAxis com.echo.holographlibrary:barShowAxis}</code></td><td></td></tr>
+           <tr><td><code>{@link #BarGraph_barShowAxisLabel com.echo.holographlibrary:barShowAxisLabel}</code></td><td></td></tr>
+           <tr><td><code>{@link #BarGraph_barShowPopup com.echo.holographlibrary:barShowPopup}</code></td><td></td></tr>
+           <tr><td><code>{@link #BarGraph_barShowText com.echo.holographlibrary:barShowText}</code></td><td></td></tr>
+           <tr><td><code>{@link #BarGraph_orientation com.echo.holographlibrary:orientation}</code></td><td></td></tr>
            </table>
            @see #BarGraph_barAxisColor
            @see #BarGraph_barShowAxis
@@ -314,7 +159,7 @@ containing a value of this type.
             0x7f01000b, 0x7f01000c
         };
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barAxisColor}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#barAxisColor}
           attribute's value can be found in the {@link #BarGraph} array.
 
 
@@ -325,11 +170,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:barAxisColor
+          @attr name com.echo.holographlibrary:barAxisColor
         */
         public static final int BarGraph_barAxisColor = 0;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowAxis}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#barShowAxis}
           attribute's value can be found in the {@link #BarGraph} array.
 
 
@@ -339,11 +184,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:barShowAxis
+          @attr name com.echo.holographlibrary:barShowAxis
         */
         public static final int BarGraph_barShowAxis = 2;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowAxisLabel}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#barShowAxisLabel}
           attribute's value can be found in the {@link #BarGraph} array.
 
 
@@ -353,11 +198,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:barShowAxisLabel
+          @attr name com.echo.holographlibrary:barShowAxisLabel
         */
         public static final int BarGraph_barShowAxisLabel = 3;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowPopup}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#barShowPopup}
           attribute's value can be found in the {@link #BarGraph} array.
 
 
@@ -367,11 +212,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:barShowPopup
+          @attr name com.echo.holographlibrary:barShowPopup
         */
         public static final int BarGraph_barShowPopup = 5;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowText}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#barShowText}
           attribute's value can be found in the {@link #BarGraph} array.
 
 
@@ -381,11 +226,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:barShowText
+          @attr name com.echo.holographlibrary:barShowText
         */
         public static final int BarGraph_barShowText = 4;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#orientation}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#orientation}
           attribute's value can be found in the {@link #BarGraph} array.
 
 
@@ -398,7 +243,7 @@ containing a value of this type.
 <tr><td><code>horizontal</code></td><td>0</td><td></td></tr>
 <tr><td><code>vertical</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.ufcg.les:orientation
+          @attr name com.echo.holographlibrary:orientation
         */
         public static final int BarGraph_orientation = 1;
         /** Attributes that can be used with a LineGraph.
@@ -407,11 +252,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LineGraph_lineAxisColor com.ufcg.les:lineAxisColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineStrokeColor com.ufcg.les:lineStrokeColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineStrokeSpacing com.ufcg.les:lineStrokeSpacing}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineStrokeWidth com.ufcg.les:lineStrokeWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineUseDip com.ufcg.les:lineUseDip}</code></td><td></td></tr>
+           <tr><td><code>{@link #LineGraph_lineAxisColor com.echo.holographlibrary:lineAxisColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #LineGraph_lineStrokeColor com.echo.holographlibrary:lineStrokeColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #LineGraph_lineStrokeSpacing com.echo.holographlibrary:lineStrokeSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #LineGraph_lineStrokeWidth com.echo.holographlibrary:lineStrokeWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #LineGraph_lineUseDip com.echo.holographlibrary:lineUseDip}</code></td><td></td></tr>
            </table>
            @see #LineGraph_lineAxisColor
            @see #LineGraph_lineStrokeColor
@@ -424,7 +269,7 @@ containing a value of this type.
             0x7f010006
         };
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineAxisColor}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#lineAxisColor}
           attribute's value can be found in the {@link #LineGraph} array.
 
 
@@ -435,11 +280,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:lineAxisColor
+          @attr name com.echo.holographlibrary:lineAxisColor
         */
         public static final int LineGraph_lineAxisColor = 1;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineStrokeColor}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#lineStrokeColor}
           attribute's value can be found in the {@link #LineGraph} array.
 
 
@@ -450,11 +295,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:lineStrokeColor
+          @attr name com.echo.holographlibrary:lineStrokeColor
         */
         public static final int LineGraph_lineStrokeColor = 0;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineStrokeSpacing}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#lineStrokeSpacing}
           attribute's value can be found in the {@link #LineGraph} array.
 
 
@@ -466,11 +311,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:lineStrokeSpacing
+          @attr name com.echo.holographlibrary:lineStrokeSpacing
         */
         public static final int LineGraph_lineStrokeSpacing = 3;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineStrokeWidth}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#lineStrokeWidth}
           attribute's value can be found in the {@link #LineGraph} array.
 
 
@@ -482,11 +327,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:lineStrokeWidth
+          @attr name com.echo.holographlibrary:lineStrokeWidth
         */
         public static final int LineGraph_lineStrokeWidth = 2;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineUseDip}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#lineUseDip}
           attribute's value can be found in the {@link #LineGraph} array.
 
 
@@ -496,7 +341,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:lineUseDip
+          @attr name com.echo.holographlibrary:lineUseDip
         */
         public static final int LineGraph_lineUseDip = 4;
         /** Attributes that can be used with a PieGraph.
@@ -505,8 +350,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PieGraph_pieInnerCircleRatio com.ufcg.les:pieInnerCircleRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #PieGraph_pieSlicePadding com.ufcg.les:pieSlicePadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieGraph_pieInnerCircleRatio com.echo.holographlibrary:pieInnerCircleRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieGraph_pieSlicePadding com.echo.holographlibrary:pieSlicePadding}</code></td><td></td></tr>
            </table>
            @see #PieGraph_pieInnerCircleRatio
            @see #PieGraph_pieSlicePadding
@@ -515,7 +360,7 @@ containing a value of this type.
             0x7f010000, 0x7f010001
         };
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#pieInnerCircleRatio}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#pieInnerCircleRatio}
           attribute's value can be found in the {@link #PieGraph} array.
 
 
@@ -525,11 +370,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:pieInnerCircleRatio
+          @attr name com.echo.holographlibrary:pieInnerCircleRatio
         */
         public static final int PieGraph_pieInnerCircleRatio = 0;
         /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#pieSlicePadding}
+          <p>This symbol is the offset where the {@link com.echo.holographlibrary.R.attr#pieSlicePadding}
           attribute's value can be found in the {@link #PieGraph} array.
 
 
@@ -541,7 +386,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.ufcg.les:pieSlicePadding
+          @attr name com.echo.holographlibrary:pieSlicePadding
         */
         public static final int PieGraph_pieSlicePadding = 1;
     };
