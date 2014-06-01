@@ -9,173 +9,57 @@ package com.ufcg.les;
 
 public final class R {
     public static final class attr {
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int barAxisColor=0x7f010007;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int barShowAxis=0x7f010009;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int barShowAxisLabel=0x7f01000a;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int barShowPopup=0x7f01000c;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int barShowText=0x7f01000b;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int lineAxisColor=0x7f010003;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int lineStrokeColor=0x7f010002;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int lineStrokeSpacing=0x7f010005;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int lineStrokeWidth=0x7f010004;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int lineUseDip=0x7f010006;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>horizontal</code></td><td>0</td><td></td></tr>
-<tr><td><code>vertical</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static int orientation=0x7f010008;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int pieInnerCircleRatio=0x7f010000;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int pieSlicePadding=0x7f010001;
     }
     public static final class color {
-        public static int back_app=0x7f050003;
-        public static int bg_gray=0x7f050002;
-        public static int black_text=0x7f050004;
-        public static int blanchedAlmond=0x7f050006;
-        public static int blue=0x7f050007;
-        public static int blueviolet=0x7f050008;
-        public static int brown=0x7f050009;
-        public static int burlywood=0x7f05000a;
-        public static int cadetblue=0x7f05000b;
-        public static int chartreuse=0x7f05000c;
-        public static int chocolate=0x7f05000d;
-        public static int coral=0x7f05000e;
-        public static int cornflowerblue=0x7f05000f;
-        public static int cornsilk=0x7f050010;
-        public static int crimson=0x7f050011;
-        public static int cyan=0x7f050012;
-        public static int darkblue=0x7f050013;
-        public static int darkcyan=0x7f050014;
-        public static int darkgoldenrod=0x7f050015;
-        public static int darkgray=0x7f050016;
-        public static int darkgreen=0x7f050017;
-        public static int darkkhaki=0x7f050018;
-        public static int darkmagenta=0x7f050019;
-        public static int darkolivegreen=0x7f05001a;
-        public static int darkorange=0x7f05001b;
-        public static int darkorchid=0x7f05001c;
-        public static int darkred=0x7f05001d;
-        public static int darksalmon=0x7f05001e;
-        public static int darkseagreen=0x7f05001f;
-        public static int darkslateblue=0x7f050020;
-        public static int darkslategray=0x7f050021;
-        public static int darkturquoise=0x7f050022;
-        public static int darkviolet=0x7f050023;
-        public static int deeppink=0x7f050024;
-        public static int deepskyblue=0x7f050025;
-        public static int dimgray=0x7f050026;
-        public static int dodgerblue=0x7f050027;
-        public static int feldspar=0x7f050028;
-        public static int firebrick=0x7f050029;
-        public static int floralwhite=0x7f05002a;
-        public static int forestgreen=0x7f05002b;
-        public static int fuchsia=0x7f05002c;
-        public static int gainsboro=0x7f05002d;
-        public static int ghostwhite=0x7f05002e;
-        public static int gold=0x7f05002f;
-        public static int goldenrod=0x7f050030;
-        public static int transparent_white=0x7f050001;
-        public static int violet=0x7f050005;
-        public static int white=0x7f050000;
+        public static final int back_app=0x7f040003;
+        public static final int bg_gray=0x7f040002;
+        public static final int black_text=0x7f040004;
+        public static final int blanchedAlmond=0x7f040006;
+        public static final int blue=0x7f040007;
+        public static final int blueviolet=0x7f040008;
+        public static final int brown=0x7f040009;
+        public static final int burlywood=0x7f04000a;
+        public static final int cadetblue=0x7f04000b;
+        public static final int chartreuse=0x7f04000c;
+        public static final int chocolate=0x7f04000d;
+        public static final int coral=0x7f04000e;
+        public static final int cornflowerblue=0x7f04000f;
+        public static final int cornsilk=0x7f040010;
+        public static final int crimson=0x7f040011;
+        public static final int cyan=0x7f040012;
+        public static final int darkblue=0x7f040013;
+        public static final int darkcyan=0x7f040014;
+        public static final int darkgoldenrod=0x7f040015;
+        public static final int darkgray=0x7f040016;
+        public static final int darkgreen=0x7f040017;
+        public static final int darkkhaki=0x7f040018;
+        public static final int darkmagenta=0x7f040019;
+        public static final int darkolivegreen=0x7f04001a;
+        public static final int darkorange=0x7f04001b;
+        public static final int darkorchid=0x7f04001c;
+        public static final int darkred=0x7f04001d;
+        public static final int darksalmon=0x7f04001e;
+        public static final int darkseagreen=0x7f04001f;
+        public static final int darkslateblue=0x7f040020;
+        public static final int darkslategray=0x7f040021;
+        public static final int darkturquoise=0x7f040022;
+        public static final int darkviolet=0x7f040023;
+        public static final int deeppink=0x7f040024;
+        public static final int deepskyblue=0x7f040025;
+        public static final int dimgray=0x7f040026;
+        public static final int dodgerblue=0x7f040027;
+        public static final int feldspar=0x7f040028;
+        public static final int firebrick=0x7f040029;
+        public static final int floralwhite=0x7f04002a;
+        public static final int forestgreen=0x7f04002b;
+        public static final int fuchsia=0x7f04002c;
+        public static final int gainsboro=0x7f04002d;
+        public static final int ghostwhite=0x7f04002e;
+        public static final int gold=0x7f04002f;
+        public static final int goldenrod=0x7f040030;
+        public static final int transparent_white=0x7f040001;
+        public static final int violet=0x7f040005;
+        public static final int white=0x7f040000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -184,80 +68,77 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static int activity_horizontal_margin=0x7f060000;
-        public static int activity_vertical_margin=0x7f060001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static int augmentedlocation=0x7f020000;
-        public static int balloon=0x7f020001;
-        public static int bg=0x7f020002;
-        public static int footer=0x7f020003;
-        public static int ic_launcher=0x7f020004;
-        public static int icon=0x7f020005;
-        public static int icon_car=0x7f020006;
-        public static int icon_get_point=0x7f020007;
-        public static int icon_get_point_touch=0x7f020008;
-        public static int icon_local=0x7f020009;
-        public static int icon_point=0x7f02000a;
-        public static int icon_view_list=0x7f02000b;
-        public static int icon_view_map=0x7f02000c;
-        public static int icon_view_point=0x7f02000d;
-        public static int image1=0x7f02000e;
-        public static int image_no_photo=0x7f02000f;
-        public static int image_no_photo_small=0x7f020010;
-        public static int image_no_photo_touch=0x7f020011;
-        public static int line=0x7f020012;
-        public static int ok_button=0x7f020013;
-        public static int ok_button_touch=0x7f020014;
-        public static int popup_black=0x7f020015;
-        public static int selecao_list=0x7f020016;
-        public static int selecao_menu=0x7f020017;
-        public static int selector_get_current_position=0x7f020018;
-        public static int selector_get_new_picture=0x7f020019;
-        public static int selector_icons_main_menu=0x7f02001a;
-        public static int selector_ok_button=0x7f02001b;
-        public static int splash_screen=0x7f02001c;
-        public static int text_box=0x7f02001d;
-        public static int text_field=0x7f02001e;
+        public static final int augmentedlocation=0x7f020000;
+        public static final int balloon=0x7f020001;
+        public static final int bg=0x7f020002;
+        public static final int footer=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int icon=0x7f020005;
+        public static final int icon_car=0x7f020006;
+        public static final int icon_get_point=0x7f020007;
+        public static final int icon_get_point_touch=0x7f020008;
+        public static final int icon_local=0x7f020009;
+        public static final int icon_point=0x7f02000a;
+        public static final int icon_view_list=0x7f02000b;
+        public static final int icon_view_map=0x7f02000c;
+        public static final int icon_view_point=0x7f02000d;
+        public static final int image1=0x7f02000e;
+        public static final int image_no_photo=0x7f02000f;
+        public static final int image_no_photo_small=0x7f020010;
+        public static final int image_no_photo_touch=0x7f020011;
+        public static final int line=0x7f020012;
+        public static final int ok_button=0x7f020013;
+        public static final int ok_button_touch=0x7f020014;
+        public static final int selecao_list=0x7f020015;
+        public static final int selecao_menu=0x7f020016;
+        public static final int selector_get_current_position=0x7f020017;
+        public static final int selector_get_new_picture=0x7f020018;
+        public static final int selector_icons_main_menu=0x7f020019;
+        public static final int selector_ok_button=0x7f02001a;
+        public static final int splash_screen=0x7f02001b;
+        public static final int text_box=0x7f02001c;
+        public static final int text_field=0x7f02001d;
     }
     public static final class id {
-        public static int BotaoCancelar=0x7f040008;
-        public static int Button_AddTI=0x7f040002;
-        public static int Button_ViewWeek=0x7f040003;
-        public static int TextRelatorioSemanal=0x7f04000e;
-        public static int TextTotalHoras=0x7f040010;
-        public static int TotalHoras=0x7f040011;
-        public static int action_settings=0x7f040012;
-        public static int botaoOK=0x7f040007;
-        public static int buttonLogar=0x7f04000d;
-        public static int graph=0x7f04000f;
-        public static int horizontal=0x7f040000;
-        public static int hours=0x7f040005;
-        public static int login=0x7f04000a;
-        public static int minutes=0x7f040006;
-        public static int name_ti=0x7f040004;
-        public static int senha=0x7f04000c;
-        public static int textView1=0x7f04000b;
-        public static int textView2=0x7f040009;
-        public static int vertical=0x7f040001;
+        public static final int BotaoCancelar=0x7f090006;
+        public static final int Button_AddTI=0x7f090000;
+        public static final int Button_ViewWeek=0x7f090001;
+        public static final int TextRelatorioSemanal=0x7f09000c;
+        public static final int TextTotalHoras=0x7f09000d;
+        public static final int TotalHoras=0x7f09000e;
+        public static final int action_settings=0x7f090010;
+        public static final int botaoOK=0x7f090005;
+        public static final int buttonLogar=0x7f09000b;
+        public static final int hours=0x7f090003;
+        public static final int listview=0x7f09000f;
+        public static final int login=0x7f090008;
+        public static final int minutes=0x7f090004;
+        public static final int name_ti=0x7f090002;
+        public static final int senha=0x7f09000a;
+        public static final int textView1=0x7f090009;
+        public static final int textView2=0x7f090007;
     }
     public static final class layout {
-        public static int activity_main=0x7f030000;
-        public static int adicionar_ti=0x7f030001;
-        public static int login=0x7f030002;
-        public static int view_week=0x7f030003;
+        public static final int activity_main=0x7f030000;
+        public static final int adicionar_ti=0x7f030001;
+        public static final int login=0x7f030002;
+        public static final int view_week=0x7f030003;
     }
     public static final class menu {
-        public static int main=0x7f090000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static int action_settings=0x7f070001;
-        public static int add_ti=0x7f070004;
-        public static int app_name=0x7f070000;
-        public static int cancel=0x7f070003;
-        public static int hours=0x7f070005;
-        public static int minutes=0x7f070006;
-        public static int ok=0x7f070002;
+        public static final int action_settings=0x7f060001;
+        public static final int add_ti=0x7f060004;
+        public static final int app_name=0x7f060000;
+        public static final int cancel=0x7f060003;
+        public static final int hours=0x7f060005;
+        public static final int minutes=0x7f060006;
+        public static final int ok=0x7f060002;
     }
     public static final class style {
         /** 
@@ -281,268 +162,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static int AppBaseTheme=0x7f080000;
-        public static int MyActionBar=0x7f080002;
-        public static int MyPopupMenu=0x7f080003;
+        public static final int AppBaseTheme=0x7f070000;
+        public static final int MyActionBar=0x7f070002;
+        public static final int MyPopupMenu=0x7f070003;
         /**  Application theme. 
          */
-        public static int MyTheme=0x7f080001;
+        public static final int MyTheme=0x7f070001;
     }
-    public static final class styleable {
-        /** Attributes that can be used with a BarGraph.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #BarGraph_barAxisColor com.ufcg.les:barAxisColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowAxis com.ufcg.les:barShowAxis}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowAxisLabel com.ufcg.les:barShowAxisLabel}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowPopup com.ufcg.les:barShowPopup}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_barShowText com.ufcg.les:barShowText}</code></td><td></td></tr>
-           <tr><td><code>{@link #BarGraph_orientation com.ufcg.les:orientation}</code></td><td></td></tr>
-           </table>
-           @see #BarGraph_barAxisColor
-           @see #BarGraph_barShowAxis
-           @see #BarGraph_barShowAxisLabel
-           @see #BarGraph_barShowPopup
-           @see #BarGraph_barShowText
-           @see #BarGraph_orientation
-         */
-        public static final int[] BarGraph = {
-            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a,
-            0x7f01000b, 0x7f01000c
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barAxisColor}
-          attribute's value can be found in the {@link #BarGraph} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:barAxisColor
-        */
-        public static final int BarGraph_barAxisColor = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowAxis}
-          attribute's value can be found in the {@link #BarGraph} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:barShowAxis
-        */
-        public static final int BarGraph_barShowAxis = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowAxisLabel}
-          attribute's value can be found in the {@link #BarGraph} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:barShowAxisLabel
-        */
-        public static final int BarGraph_barShowAxisLabel = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowPopup}
-          attribute's value can be found in the {@link #BarGraph} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:barShowPopup
-        */
-        public static final int BarGraph_barShowPopup = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#barShowText}
-          attribute's value can be found in the {@link #BarGraph} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:barShowText
-        */
-        public static final int BarGraph_barShowText = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#orientation}
-          attribute's value can be found in the {@link #BarGraph} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>horizontal</code></td><td>0</td><td></td></tr>
-<tr><td><code>vertical</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.ufcg.les:orientation
-        */
-        public static final int BarGraph_orientation = 1;
-        /** Attributes that can be used with a LineGraph.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LineGraph_lineAxisColor com.ufcg.les:lineAxisColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineStrokeColor com.ufcg.les:lineStrokeColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineStrokeSpacing com.ufcg.les:lineStrokeSpacing}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineStrokeWidth com.ufcg.les:lineStrokeWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #LineGraph_lineUseDip com.ufcg.les:lineUseDip}</code></td><td></td></tr>
-           </table>
-           @see #LineGraph_lineAxisColor
-           @see #LineGraph_lineStrokeColor
-           @see #LineGraph_lineStrokeSpacing
-           @see #LineGraph_lineStrokeWidth
-           @see #LineGraph_lineUseDip
-         */
-        public static final int[] LineGraph = {
-            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
-            0x7f010006
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineAxisColor}
-          attribute's value can be found in the {@link #LineGraph} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:lineAxisColor
-        */
-        public static final int LineGraph_lineAxisColor = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineStrokeColor}
-          attribute's value can be found in the {@link #LineGraph} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:lineStrokeColor
-        */
-        public static final int LineGraph_lineStrokeColor = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineStrokeSpacing}
-          attribute's value can be found in the {@link #LineGraph} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:lineStrokeSpacing
-        */
-        public static final int LineGraph_lineStrokeSpacing = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineStrokeWidth}
-          attribute's value can be found in the {@link #LineGraph} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:lineStrokeWidth
-        */
-        public static final int LineGraph_lineStrokeWidth = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#lineUseDip}
-          attribute's value can be found in the {@link #LineGraph} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:lineUseDip
-        */
-        public static final int LineGraph_lineUseDip = 4;
-        /** Attributes that can be used with a PieGraph.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PieGraph_pieInnerCircleRatio com.ufcg.les:pieInnerCircleRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #PieGraph_pieSlicePadding com.ufcg.les:pieSlicePadding}</code></td><td></td></tr>
-           </table>
-           @see #PieGraph_pieInnerCircleRatio
-           @see #PieGraph_pieSlicePadding
-         */
-        public static final int[] PieGraph = {
-            0x7f010000, 0x7f010001
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#pieInnerCircleRatio}
-          attribute's value can be found in the {@link #PieGraph} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:pieInnerCircleRatio
-        */
-        public static final int PieGraph_pieInnerCircleRatio = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.ufcg.les.R.attr#pieSlicePadding}
-          attribute's value can be found in the {@link #PieGraph} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ufcg.les:pieSlicePadding
-        */
-        public static final int PieGraph_pieSlicePadding = 1;
-    };
 }

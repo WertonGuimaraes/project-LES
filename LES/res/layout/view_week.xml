@@ -12,7 +12,7 @@
        android:textSize="25sp"
        android:text="Relatório semanal"/>
     
-    
+    <!--
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -22,7 +22,7 @@
         android:layout_height="200dp"
         android:id="@+id/graph"/>
         
-    </LinearLayout>
+    </LinearLayout> -->
     
      <LinearLayout 
         android:layout_width="match_parent"
@@ -45,10 +45,15 @@
              android:layout_marginRight="15dp"
              android:gravity="center"
              android:text="40"/> <!-- depois sera alterado. So um exemplo -->
-         
-         
-        
+            
     </LinearLayout> 
+    
+    <ListView 
+    android:id="@+id/listview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        
+    </ListView>
 
     <!-- <com.echo.holographlibrary.BarGraph
         android:id="@+id/graph"

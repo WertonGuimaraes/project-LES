@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.Random;
 
-import com.echo.holographlibrary.PieGraph;
-import com.echo.holographlibrary.PieSlice;
+//import com.echo.holographlibrary.PieGraph;
+//import com.echo.holographlibrary.PieSlice;
 import com.ufcg.entities.Session;
 import com.ufcg.entities.Ti;
 
@@ -15,14 +15,17 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class Semana extends Activity {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.view_week);
-		
-		
+		setContentView(R.layout.view_week);		
+
+		/*
 		PieGraph pg = (PieGraph)findViewById(R.id.graph);
 		PieSlice slice;
 		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
@@ -35,7 +38,50 @@ public class Semana extends Activity {
 			slice.setTitle(entry.getKey());
 			pg.addSlice(slice);
 			
-		}
+		}*/
+		
+		
+		
+		
+		//--------------------------ListView------------------------
+		/*ListView listview = (ListView) findViewById(R.id.listview);
+	    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+	        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+	        "Linux", "OS/2"};
+	    
+	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+	            android.R.layout.list_content, values);
+	       setListAdapter(adapter);
+
+
+	    ArrayList<String> list = new ArrayList<String>();
+	    for (int i = 0; i < values.length; ++i) {
+	      list.add(values[i]);
+	    }*/
+
+	    /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+	      @Override
+	      public void onItemClick(AdapterView<?> parent, final View view,
+	          int position, long id) {
+	        final String item = (String) parent.getItemAtPosition(position);
+	        view.animate().setDuration(2000).alpha(0)
+	            .withEndAction(new Runnable() {
+	              @Override
+	              public void run() {
+	                list.remove(item);
+	                adapter.notifyDataSetChanged();
+	                view.setAlpha(1);
+	              }
+	            });
+	      }
+
+	    });*/
+	    
+	    
+	    
+	    //-------------------------FIM LISTVIEW--------
+		
 	}
 
 
@@ -59,6 +105,8 @@ public class Semana extends Activity {
 
 		finish();
 	}
+	
+	
 
 }
 
