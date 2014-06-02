@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,8 +31,7 @@ public class Login extends Activity {
 			@Override
 			public void onClick(View v) {
 				new CapturaJSON().execute(login.getText().toString());
-				Intent i = new Intent(Login.this,MainActivity.class);
-				startActivity(i);
+				
 			}
 		});
 	}
@@ -47,6 +47,7 @@ public class Login extends Activity {
 
 		@Override
 		protected ArrayList<Ti> doInBackground(String... params) {
+			Log.d("werton", "parans: "+ params[0]);
 			return getJSON(params[0]);
 		}
 
@@ -61,6 +62,8 @@ public class Login extends Activity {
 				Session.getInstancia().getAtividades().add(ti);
 			}
 			
+			Intent i = new Intent(Login.this,MainActivity.class);
+			startActivity(i);
 			dialog.dismiss();
 		}
 

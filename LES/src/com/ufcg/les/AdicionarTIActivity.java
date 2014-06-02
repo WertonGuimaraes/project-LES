@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,16 +19,17 @@ import com.ufcg.json.JSONParse;
 public class AdicionarTIActivity extends Activity { 
 	
 	//Definidas inicialmente para depois serem implementadas.
-	private static final String DONO = Session.getInstancia().getDono();
+	
 	private static final int PRIORIDADE = 0;
 	private static final String FOTO = null;
-	
+	private String dono;
 	private int tempo;
 	NumberPicker horas, minutos;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.adicionar_ti);
+		dono = Session.getInstancia().getDono();
 		
 		horas = (NumberPicker) findViewById(R.id.hours);
 		horas.setMaxValue(23);
@@ -59,7 +61,8 @@ public class AdicionarTIActivity extends Activity {
 				tempo = horas.getValue()*60 + minutos.getValue();
 				Data d = new Data();
 				String data = String.valueOf(d.convertDateToMilissegundos());
-				new SalvaJSON().execute(DONO, nome.getText().toString(), String.valueOf(tempo), data);
+				Log.d("werton", "donooo: "+dono);
+				new SalvaJSON().execute(dono, nome.getText().toString(), String.valueOf(tempo), data);
 			}
 		});
 	}

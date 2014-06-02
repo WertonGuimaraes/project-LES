@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.Random;
 
+
+
+import com.echo.holographlibrary.PieGraph;
+import com.echo.holographlibrary.PieSlice;
 //import com.echo.holographlibrary.PieGraph;
 //import com.echo.holographlibrary.PieSlice;
 import com.ufcg.entities.Session;
@@ -25,7 +29,7 @@ public class Semana extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.view_week);		
 
-		/*
+		
 		PieGraph pg = (PieGraph)findViewById(R.id.graph);
 		PieSlice slice;
 		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
@@ -38,7 +42,7 @@ public class Semana extends Activity {
 			slice.setTitle(entry.getKey());
 			pg.addSlice(slice);
 			
-		}*/
+		}
 		
 		
 		

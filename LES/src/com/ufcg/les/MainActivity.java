@@ -12,8 +12,6 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-	private static final String DONO = Session.getInstancia().getDono() ;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
