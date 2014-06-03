@@ -38,8 +38,8 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
-public class Login extends Activity /*implements OnClickListener,
-ConnectionCallbacks, OnConnectionFailedListener*/{
+public class Login extends Activity implements OnClickListener,
+ConnectionCallbacks, OnConnectionFailedListener{
 
 	EditText login;
 	
@@ -83,7 +83,7 @@ ConnectionCallbacks, OnConnectionFailedListener*/{
         txtEmail = (TextView) findViewById(R.id.txtEmail);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
 	
-        /*
+        
        // Button click listeners
         btnSignIn.setOnClickListener(this);
         btnSignOut.setOnClickListener(this);
@@ -92,9 +92,9 @@ ConnectionCallbacks, OnConnectionFailedListener*/{
         // Initializing google plus api client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this).addApi(Plus.API, null)
+                .addOnConnectionFailedListener(this).addApi(Plus.API) //(plusApi,null)
                 .addScope(Plus.SCOPE_PLUS_LOGIN).build();
-		*/
+		
 		
 		
 		
@@ -147,7 +147,7 @@ ConnectionCallbacks, OnConnectionFailedListener*/{
 			return parser.TiPars();
 		}
 	}
-	/*
+	
 	//--google
 	protected void onStart() {
         super.onStart();
@@ -363,5 +363,5 @@ ConnectionCallbacks, OnConnectionFailedListener*/{
      
                     });
         }
-    }*/
+    }
 }
