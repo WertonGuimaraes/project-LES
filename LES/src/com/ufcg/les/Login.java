@@ -42,10 +42,11 @@ public class Login extends Activity implements OnClickListener,
 ConnectionCallbacks, OnConnectionFailedListener{
 
 	EditText login;
+	String email = "";
 	
 	private static final int RC_SIGN_IN = 0;
  
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "LoginActivity";
  
     // Profile pic image size in pixels
     private static final int PROFILE_PIC_SIZE = 400;
@@ -64,7 +65,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
     private ConnectionResult mConnectionResult;
  
     private SignInButton btnSignIn;
-    private Button btnSignOut, btnRevokeAccess;
+    private Button btnSignOut, btnRevokeAccess, continuar;
     private ImageView imgProfilePic;
     private TextView txtName, txtEmail;
     private LinearLayout llProfileLayout;
@@ -75,6 +76,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 		setContentView(R.layout.login);
 		
 		//--google
+		continuar = (Button) findViewById(R.id.buttonContinuar);
 		btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
@@ -95,9 +97,16 @@ ConnectionCallbacks, OnConnectionFailedListener{
                 .addOnConnectionFailedListener(this).addApi(Plus.API) //(plusApi,null)
                 .addScope(Plus.SCOPE_PLUS_LOGIN).build();
 		
+        
+        continuar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				new CapturaJSON().execute(email);
+				
+			}
+		});
 		
-		
-		
+        /*
 		login = (EditText) findViewById(R.id.login);
 		Button btLogar = (Button) findViewById(R.id.buttonLogar);
 		btLogar.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +115,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 				new CapturaJSON().execute(login.getText().toString());
 				
 			}
-		});
+		});*/
 	}
 	
 	public class CapturaJSON extends AsyncTask<String, Void, ArrayList<Ti>> {
@@ -129,7 +138,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 			super.onPostExecute(result);
 			
 			Session.getInstancia().delInstancia();
-			Session.getInstancia().setDono(login.getText().toString());
+			Session.getInstancia().setDono(email); //login.getText().toString()
 			
 			for (Ti ti : result) {
 				Session.getInstancia().getAtividades().add(ti);
@@ -193,9 +202,6 @@ ConnectionCallbacks, OnConnectionFailedListener{
             mConnectionResult = result;
      
             if (mSignInClicked) {
-                // The user has already clicked 'sign-in' so we attempt to
-                // resolve all
-                // errors until the user is signed in, or they cancel.
                 resolveSignInError();
             }
         }
@@ -285,7 +291,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
                 String personName = currentPerson.getDisplayName();
                 String personPhotoUrl = currentPerson.getImage().getUrl();
                 String personGooglePlusProfile = currentPerson.getUrl();
-                String email = Plus.AccountApi.getAccountName(mGoogleApiClient);
+                email = Plus.AccountApi.getAccountName(mGoogleApiClient);
      
                 Log.e(TAG, "Name: " + personName + ", plusProfile: "
                         + personGooglePlusProfile + ", email: " + email

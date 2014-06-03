@@ -8,6 +8,7 @@
     <string name="add_ti">Adicionar TI</string>
     <string name="hours">Horas</string>
     <string name="minutes">Minutos</string>
+    <string name="continar">Continar</string>
     
     <string name="btn_logout_from_google">Sair do Google </string>
     <string name="btn_revoke_access">Revogar Acesso</string>

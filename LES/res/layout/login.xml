@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="@drawable/bg_web">
+    android:background="@drawable/bg_02">
 
+    <!-- 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -48,15 +49,16 @@
             android:textColor="@color/white"
             android:inputType="textPassword" />
     </LinearLayout>
+-->
 
     <Button
-        android:id="@+id/buttonLogar"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonContinuar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/white"
-        android:text="Logar" 
-        android:layout_marginBottom="10dp"/>
+        android:text="@string/continar"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
     
     <!-- botao google -->
     <LinearLayout
