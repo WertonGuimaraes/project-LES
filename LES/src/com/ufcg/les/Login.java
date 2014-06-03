@@ -38,8 +38,8 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
-public class Login extends Activity implements OnClickListener,
-ConnectionCallbacks, OnConnectionFailedListener{
+public class Login extends Activity /*implements OnClickListener,
+ConnectionCallbacks, OnConnectionFailedListener*/{
 
 	EditText login;
 	
@@ -82,7 +82,8 @@ ConnectionCallbacks, OnConnectionFailedListener{
         txtName = (TextView) findViewById(R.id.txtName);
         txtEmail = (TextView) findViewById(R.id.txtEmail);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
-        
+	
+        /*
        // Button click listeners
         btnSignIn.setOnClickListener(this);
         btnSignOut.setOnClickListener(this);
@@ -93,10 +94,10 @@ ConnectionCallbacks, OnConnectionFailedListener{
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this).addApi(Plus.API, null)
                 .addScope(Plus.SCOPE_PLUS_LOGIN).build();
+		*/
 		
 		
 		
-		/*
 		login = (EditText) findViewById(R.id.login);
 		Button btLogar = (Button) findViewById(R.id.buttonLogar);
 		btLogar.setOnClickListener(new View.OnClickListener() {
@@ -105,7 +106,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 				new CapturaJSON().execute(login.getText().toString());
 				
 			}
-		});*/
+		});
 	}
 	
 	public class CapturaJSON extends AsyncTask<String, Void, ArrayList<Ti>> {
@@ -146,7 +147,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 			return parser.TiPars();
 		}
 	}
-	
+	/*
 	//--google
 	protected void onStart() {
         super.onStart();
@@ -160,9 +161,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
         }
     }
  
-    /**
-     * Button on click listener
-     * */
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -238,9 +237,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
         updateUI(false);
     }
      
-    /**
-     * Updating the UI, showing/hiding buttons and profile layout
-     * */
+
     private void updateUI(boolean isSignedIn) {
         if (isSignedIn) {
             btnSignIn.setVisibility(View.GONE);
@@ -257,9 +254,6 @@ ConnectionCallbacks, OnConnectionFailedListener{
     
     
     //login----
-    /**
-     * Sign-in into google
-     * */
     private void signInWithGplus() {
         if (!mGoogleApiClient.isConnecting()) {
             mSignInClicked = true;
@@ -267,9 +261,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
         }
     }
      
-    /**
-     * Method to resolve any signin errors
-     * */
+
     private void resolveSignInError() {
         if (mConnectionResult.hasResolution()) {
             try {
@@ -285,9 +277,6 @@ ConnectionCallbacks, OnConnectionFailedListener{
     
     //-------------------
     
-    /**
-     * Fetching user's information name, email, profile pic
-     * */
     private void getProfileInformation() {
         try {
             if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
@@ -323,9 +312,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
         }
     }
      
-    /**
-     * Background Async task to load user profile picture from url
-     * */
+ 
     private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
      
@@ -351,9 +338,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
         }
     }
 	
-    /**
-     * Sign-out from google
-     * */
+
     private void signOutFromGplus() {
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -363,9 +348,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
         }
     }
     
-    /**
-     * Revoking access from google
-     * */
+
     private void revokeGplusAccess() {
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -380,5 +363,5 @@ ConnectionCallbacks, OnConnectionFailedListener{
      
                     });
         }
-    }
+    }*/
 }
