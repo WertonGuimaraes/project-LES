@@ -70,13 +70,18 @@ public class Semana extends Activity {
 	private void retornaRanking() {
 		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 		Map<String, Integer> titempo = new HashMap<String, Integer>();
+		Map<String, Integer> tiprop = new HashMap<String, Integer>();
 		
+		
+		// atividades e tempos das atividades
+		int tempoTotal = 0;
 		for (Ti ti : atividadesDaSemana) {
-			ti.getTempo();
-			// adicionar nome da atividade e tempo da atividade
+			titempo.put(ti.getNome(), ti.getTempo());
+			tempoTotal+=ti.getTempo();
 		}
 		
-		// pegar o tempo de cada atividade de dividir pelo total da soma
+		// atividades e proporção do tempo das atividades
+		
 	}
 	
 	
