@@ -65,6 +65,8 @@ public class Comparativo extends Activity {
 	}
 	
 	
+	// ranking para cada semana
+	
 
 }
 

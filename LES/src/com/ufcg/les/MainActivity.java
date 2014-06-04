@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
-		openAlert("Logout", "Clique em OK para deslogar.");
+		openAlert("Logout", "Clique em OK para sair do sistema.");
 	}
 	
 	private void openAlert(String titulo, String mensagem) {

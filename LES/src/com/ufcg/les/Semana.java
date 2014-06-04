@@ -2,15 +2,14 @@ package com.ufcg.les;
 
 import java.text.Format;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
 
-
 import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
-//import com.echo.holographlibrary.PieGraph;
-//import com.echo.holographlibrary.PieSlice;
 import com.ufcg.entities.Session;
 import com.ufcg.entities.Ti;
 
@@ -43,49 +42,6 @@ public class Semana extends Activity {
 			pg.addSlice(slice);
 			
 		}
-		
-		
-		
-		
-		//--------------------------ListView------------------------
-		/*ListView listview = (ListView) findViewById(R.id.listview);
-	    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-	        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-	        "Linux", "OS/2"};
-	    
-	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-	            android.R.layout.list_content, values);
-	       setListAdapter(adapter);
-
-
-	    ArrayList<String> list = new ArrayList<String>();
-	    for (int i = 0; i < values.length; ++i) {
-	      list.add(values[i]);
-	    }*/
-
-	    /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-	      @Override
-	      public void onItemClick(AdapterView<?> parent, final View view,
-	          int position, long id) {
-	        final String item = (String) parent.getItemAtPosition(position);
-	        view.animate().setDuration(2000).alpha(0)
-	            .withEndAction(new Runnable() {
-	              @Override
-	              public void run() {
-	                list.remove(item);
-	                adapter.notifyDataSetChanged();
-	                view.setAlpha(1);
-	              }
-	            });
-	      }
-
-	    });*/
-	    
-	    
-	    
-	    //-------------------------FIM LISTVIEW--------
-		
 	}
 
 
@@ -112,7 +68,15 @@ public class Semana extends Activity {
 	
 	// lembrar de fazer o ranking e proporção de horas
 	private void retornaRanking() {
-		// TO DO
+		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
+		Map<String, Integer> titempo = new HashMap<String, Integer>();
+		
+		for (Ti ti : atividadesDaSemana) {
+			ti.getTempo();
+			// adicionar nome da atividade e tempo da atividade
+		}
+		
+		// pegar o tempo de cada atividade de dividir pelo total da soma
 	}
 	
 	
