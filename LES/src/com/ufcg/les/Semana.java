@@ -73,18 +73,17 @@ public class Semana extends Activity {
 		Map<String, Integer> tiprop = new HashMap<String, Integer>();
 		
 		
-		// atividades e tempos das atividades
+		// mapa com as atividades e tempos das atividades
 		int tempoTotalInvestido = 0;
 		for (Ti ti : atividadesDaSemana) {
 			titempo.put(ti.getNome(), ti.getTempo());
 			tempoTotalInvestido += ti.getTempo();
 		}
 		
-		// atividades e proporção do tempo das atividades
-		
+		// mapa com as atividades e proporção do tempo das atividades
+		for (Entry<String, Integer> entry : titempo.entrySet()) {  
+			tiprop.put(entry.getKey(), entry.getValue()/tempoTotalInvestido);   
+		}
 	}
-	
-	
-
 }
 
