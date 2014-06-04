@@ -110,6 +110,11 @@ public class Semana extends Activity {
 		finish();
 	}
 	
+	// lembrar de fazer o ranking e proporção de horas
+	private void retornaRanking() {
+		// TO DO
+	}
+	
 	
 
 }
