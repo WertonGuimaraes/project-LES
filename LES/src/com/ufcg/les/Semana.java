@@ -74,10 +74,10 @@ public class Semana extends Activity {
 		
 		
 		// atividades e tempos das atividades
-		int tempoTotal = 0;
+		int tempoTotalInvestido = 0;
 		for (Ti ti : atividadesDaSemana) {
 			titempo.put(ti.getNome(), ti.getTempo());
-			tempoTotal+=ti.getTempo();
+			tempoTotalInvestido += ti.getTempo();
 		}
 		
 		// atividades e proporção do tempo das atividades
