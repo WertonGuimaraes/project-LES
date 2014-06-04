@@ -5,18 +5,18 @@
     android:orientation="vertical"
     tools:context="com.ufcg.les.MainActivity" 
     android:gravity="center"
-    android:background="@drawable/bg_02">
+    android:background="@drawable/bg">
 
     <Button
         android:id="@+id/Button_AddTI"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/add_ti" />
     
     <Button
         android:id="@+id/Button_ViewWeek"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Ver semana" />

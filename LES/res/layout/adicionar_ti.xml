@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center|bottom"
     tools:context=".MainActivity"
-    android:background="@drawable/bg_02" >
+    android:background="@drawable/bg" >
     
     
     <LinearLayout 
@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome TI"
+            android:text="Nome Ti"
             android:textSize="20sp" />
         
         <MultiAutoCompleteTextView 

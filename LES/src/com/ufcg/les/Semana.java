@@ -40,7 +40,6 @@ public class Semana extends Activity {
 			slice.setValue(entry.getValue());
 			slice.setTitle(entry.getKey());
 			pg.addSlice(slice);
-			
 		}
 	}
 
@@ -67,11 +66,10 @@ public class Semana extends Activity {
 	}
 	
 	// lembrar de fazer o ranking e proporção de horas
-	private void retornaRanking() {
+	private Map retornaRanking() {
 		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 		Map<String, Integer> titempo = new HashMap<String, Integer>();
 		Map<String, Integer> tiprop = new HashMap<String, Integer>();
-		
 		
 		// mapa com as atividades e tempos das atividades
 		int tempoTotalInvestido = 0;
@@ -84,6 +82,8 @@ public class Semana extends Activity {
 		for (Entry<String, Integer> entry : titempo.entrySet()) {  
 			tiprop.put(entry.getKey(), entry.getValue()/tempoTotalInvestido);   
 		}
+		
+		return tiprop;
 	}
 }
 

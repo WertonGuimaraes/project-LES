@@ -588,20 +588,21 @@ containing a value of this type.
         public static final int image_no_photo_small=0x7f02002f;
         public static final int image_no_photo_touch=0x7f020030;
         public static final int line=0x7f020031;
-        public static final int ok_button=0x7f020032;
-        public static final int ok_button_touch=0x7f020033;
-        public static final int popup_black=0x7f020034;
-        public static final int powered_by_google_dark=0x7f020035;
-        public static final int powered_by_google_light=0x7f020036;
-        public static final int selecao_list=0x7f020037;
-        public static final int selecao_menu=0x7f020038;
-        public static final int selector_get_current_position=0x7f020039;
-        public static final int selector_get_new_picture=0x7f02003a;
-        public static final int selector_icons_main_menu=0x7f02003b;
-        public static final int selector_ok_button=0x7f02003c;
-        public static final int splash_screen=0x7f02003d;
-        public static final int text_box=0x7f02003e;
-        public static final int text_field=0x7f02003f;
+        public static final int nome=0x7f020032;
+        public static final int ok_button=0x7f020033;
+        public static final int ok_button_touch=0x7f020034;
+        public static final int popup_black=0x7f020035;
+        public static final int powered_by_google_dark=0x7f020036;
+        public static final int powered_by_google_light=0x7f020037;
+        public static final int selecao_list=0x7f020038;
+        public static final int selecao_menu=0x7f020039;
+        public static final int selector_get_current_position=0x7f02003a;
+        public static final int selector_get_new_picture=0x7f02003b;
+        public static final int selector_icons_main_menu=0x7f02003c;
+        public static final int selector_ok_button=0x7f02003d;
+        public static final int splash_screen=0x7f02003e;
+        public static final int text_box=0x7f02003f;
+        public static final int text_field=0x7f020040;
     }
     public static final class id {
         public static final int BotaoCancelar=0x7f04001c;
@@ -613,9 +614,9 @@ containing a value of this type.
         public static final int action_settings=0x7f04002a;
         public static final int book_now=0x7f040012;
         public static final int botaoOK=0x7f04001b;
-        public static final int btn_revoke_access=0x7f040024;
-        public static final int btn_sign_in=0x7f040022;
-        public static final int btn_sign_out=0x7f040023;
+        public static final int btn_revoke_access=0x7f040023;
+        public static final int btn_sign_in=0x7f040024;
+        public static final int btn_sign_out=0x7f040022;
         public static final int buttonContinuar=0x7f04001d;
         public static final int buyButton=0x7f04000c;
         public static final int buy_now=0x7f040011;
@@ -654,8 +655,9 @@ containing a value of this type.
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int adicionar_ti=0x7f030001;
-        public static final int login=0x7f030002;
-        public static final int view_week=0x7f030003;
+        public static final int autenticacao=0x7f030002;
+        public static final int login=0x7f030003;
+        public static final int view_week=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

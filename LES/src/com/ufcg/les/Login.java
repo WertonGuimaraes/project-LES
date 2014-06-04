@@ -49,7 +49,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
     private static final String TAG = "LoginActivity";
  
     // Profile pic image size in pixels
-    private static final int PROFILE_PIC_SIZE = 400;
+    private static final int PROFILE_PIC_SIZE = 350;
  
     // Google client to interact with Google API
     private GoogleApiClient mGoogleApiClient;
