@@ -1,31 +1,24 @@
 package com.ufcg.les;
 
 import java.io.InputStream;
-
 import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.IntentSender.SendIntentException;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import android.content.IntentSender.SendIntentException;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-
-import com.ufcg.entities.Session;
-import com.ufcg.entities.Ti;
-import com.ufcg.json.JSONParse;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -37,12 +30,14 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
+import com.ufcg.entities.Session;
+import com.ufcg.entities.Ti;
+import com.ufcg.json.JSONParse;
 
 public class Login extends Activity implements OnClickListener,
 ConnectionCallbacks, OnConnectionFailedListener{
 
-	EditText login;
-	String email = "";
+	private String email = "";
 	
 	private static final int RC_SIGN_IN = 0;
  
@@ -118,7 +113,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 		});*/
 	}
 	
-	public class CapturaJSON extends AsyncTask<String, Void, ArrayList<Ti>> {
+	private class CapturaJSON extends AsyncTask<String, Void, ArrayList<Ti>> {
 		private ProgressDialog dialog;
 
 		@Override

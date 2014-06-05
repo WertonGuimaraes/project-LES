@@ -79,7 +79,7 @@ public class AdicionarTIActivity extends Activity {
 	 * @author Werton
 	 *
 	 */
-	public class SalvaJSON extends AsyncTask<String, Void, String[]> {
+	private class SalvaJSON extends AsyncTask<String, Void, String[]> {
 		private ProgressDialog dialog;
 
 		@Override
