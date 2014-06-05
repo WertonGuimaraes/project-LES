@@ -1,14 +1,18 @@
 package com.ufcg.les;
 
+import android.R.bool;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.method.Touch;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.Toast;
 
 import com.ufcg.entities.Data;
 import com.ufcg.entities.Session;
@@ -22,11 +26,13 @@ public class AdicionarTIActivity extends Activity {
 	private static final String COR = null;
 	private String dono;
 	private int tempo;
-	NumberPicker horas, minutos;
+	private NumberPicker horas, minutos;
+	private Context mContext;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.adicionar_ti);
+		mContext = getApplicationContext();
 		dono = Session.getInstancia().getDono();
 		
 		horas = (NumberPicker) findViewById(R.id.hours);
@@ -75,8 +81,8 @@ public class AdicionarTIActivity extends Activity {
 		
 		@Override
 		protected String[] doInBackground(String... params) {
-			salvaTi(params[0], params[1], params[2], params[3]);
-			String[] retorno = {params[0], params[1], params[2], params[3]};
+			boolean wasAdd = salvaTi(params[0], params[1], params[2], params[3]);
+			String[] retorno = {params[0], params[1], params[2], params[3], String.valueOf(wasAdd)};
 			return retorno;
 		}
 		
@@ -86,13 +92,19 @@ public class AdicionarTIActivity extends Activity {
 			String nome = result[1];
 			Integer tempo = Integer.parseInt(result[2]);
 			Long data = (long) Double.parseDouble(result[3]);
-			Session.getInstancia().getAtividades().add(new Ti(nome, tempo, data, FOTO, PRIORIDADE, COR));
+			if(result[4].equals("true")){
+				Session.getInstancia().getAtividades().add(new Ti(nome, tempo, data, FOTO, PRIORIDADE, COR));
+				Toast.makeText(mContext, "Tempo investido adicionado com SUCESSO!", Toast.LENGTH_LONG).show();
+			}else{
+				Toast.makeText(mContext, "Tempo investido FALHOU ao ser adicionado.", Toast.LENGTH_LONG).show();
+			}
 			dialog.dismiss();
 		}
 
-		private void salvaTi(String dono, String nome, String tempo, String data){		
+		private boolean salvaTi(String dono, String nome, String tempo, String data){		
 			String url = "http://150.165.98.11:8080/povmt/atividade/salvarAtividade?dono=" + dono +	"&nome=" + nome + "&tempo=" + tempo + "&data=" + data;
-			new JSONParse(url);
+			JSONParse json = new JSONParse(url);
+			return json.getAdicionou();
 		}
 
 	}

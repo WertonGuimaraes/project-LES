@@ -27,14 +27,21 @@ public class JSONParse {
 	private static final String PRIORIDADE = "prioridade";
 	private static final String COR = "nome";
 	
-
+	private boolean adicionou;
+	
 
 	public JSONParse(String feedUrl) {
+		adicionou = true;
 		try {
 			this.feedUrl = new URL(feedUrl);
 			JSON();
 		} catch (MalformedURLException e) {
+			adicionou = false;
 		}
+	}
+	
+	public boolean getAdicionou() {
+		return adicionou;
 	}
 
 	private void JSON() {
