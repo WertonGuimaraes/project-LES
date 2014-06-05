@@ -64,15 +64,15 @@ public class AdicionarTIActivity extends Activity {
 			}
 		});
 		
-		/*Button voltar = (Button) findViewById(R.id.BotaoCancelar);
-		adicionarTI.setOnClickListener(new View.OnClickListener() {
+		Button voltar = (Button) findViewById(R.id.BotaoCancelar);
+		voltar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(AdicionarTIActivity.this,MainActivity.class);
 				startActivity(i);
 				finish();
 			}
-		});*/
+		});
 		
 	}
 	

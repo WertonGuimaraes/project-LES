@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Projeto Piloto</string>
+    <string name="app_name">Cronus</string>
     <string name="action_settings">Configurações</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancelar</string>

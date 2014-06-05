@@ -58,15 +58,6 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/nome" />
 
-    <Button
-        android:id="@+id/buttonContinuar"
-        android:layout_width="105dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center_horizontal"
-        android:text="@string/continar" />
     
     <!-- botao google -->
     <LinearLayout
@@ -81,12 +72,12 @@
         <ImageView
             android:id="@+id/imgProfilePic"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_weight="1"/>
  
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:orientation="vertical"
             android:layout_weight="2" >
@@ -114,10 +105,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp" >
     </com.google.android.gms.common.SignInButton>
- 
+    
+    <Button
+        android:id="@+id/buttonContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/continar"
+        android:visibility="gone"/>
+    
     <Button
         android:id="@+id/btn_sign_out"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_logout_from_google"
         android:visibility="gone"
@@ -125,7 +123,7 @@
  
     <Button
         android:id="@+id/btn_revoke_access"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_revoke_access"
         android:visibility="gone" />
