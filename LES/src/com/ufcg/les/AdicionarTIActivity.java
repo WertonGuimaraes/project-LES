@@ -64,13 +64,16 @@ public class AdicionarTIActivity extends Activity {
 			}
 		});
 		
-		Button voltar = (Button) findViewById(R.id.BotaoCancelar);
+		/*Button voltar = (Button) findViewById(R.id.BotaoCancelar);
 		adicionarTI.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// voltar a tela do menu principal
+				Intent i = new Intent(AdicionarTIActivity.this,MainActivity.class);
+				startActivity(i);
+				finish();
 			}
-		});
+		});*/
+		
 	}
 	
 	public class SalvaJSON extends AsyncTask<String, Void, String[]> {
