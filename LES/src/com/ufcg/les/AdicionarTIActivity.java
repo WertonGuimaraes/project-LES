@@ -18,8 +18,6 @@ import com.ufcg.json.JSONParse;
 
 public class AdicionarTIActivity extends Activity { 
 	
-	//Definidas inicialmente para depois serem implementadas.
-	
 	private static final int PRIORIDADE = 0;
 	private static final String FOTO = null;
 	private String dono;
@@ -73,7 +71,6 @@ public class AdicionarTIActivity extends Activity {
 				// voltar a tela do menu principal
 			}
 		});
-		
 	}
 	
 	public class SalvaJSON extends AsyncTask<String, Void, String[]> {
@@ -82,7 +79,7 @@ public class AdicionarTIActivity extends Activity {
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			dialog = ProgressDialog.show(AdicionarTIActivity.this, "Espere", "Salvando BD");
+			dialog = ProgressDialog.show(AdicionarTIActivity.this, "Espere", "Salvando sua atividade ..");
 		}
 		
 		@Override
