@@ -39,11 +39,11 @@ public class MainActivity extends Activity {
 		});
 	}
 	
-	@Override
+	/*@Override
 	public void onBackPressed() {
 		openAlert("Logout", "Clique em OK para sair do sistema.");
 	}
-	
+	*/
 	private void openAlert(String titulo, String mensagem) {
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 		alertDialogBuilder.setTitle(titulo);

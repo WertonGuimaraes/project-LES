@@ -124,7 +124,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			dialog = ProgressDialog.show(Login.this, "Espere", "Logando");
+			dialog = ProgressDialog.show(Login.this, "Espere", "Sincronizando os dados");
 		}
 
 		@Override
@@ -227,7 +227,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
     @Override
     public void onConnected(Bundle arg0) {
         mSignInClicked = false;
-        Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
      
         // Get user's information
         getProfileInformation();
