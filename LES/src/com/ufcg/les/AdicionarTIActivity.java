@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +19,7 @@ public class AdicionarTIActivity extends Activity {
 	
 	private static final int PRIORIDADE = 0;
 	private static final String FOTO = null;
+	private static final String COR = null;
 	private String dono;
 	private int tempo;
 	NumberPicker horas, minutos;
@@ -59,21 +59,9 @@ public class AdicionarTIActivity extends Activity {
 				tempo = horas.getValue()*60 + minutos.getValue();
 				Data d = new Data();
 				String data = String.valueOf(d.convertDateToMilissegundos());
-				Log.d("werton", "donooo: "+dono);
 				new SalvaJSON().execute(dono, nome.getText().toString(), String.valueOf(tempo), data);
 			}
-		});
-		
-		Button voltar = (Button) findViewById(R.id.BotaoCancelar);
-		voltar.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(AdicionarTIActivity.this,MainActivity.class);
-				startActivity(i);
-				finish();
-			}
-		});
-		
+		});		
 	}
 	
 	public class SalvaJSON extends AsyncTask<String, Void, String[]> {
@@ -98,7 +86,7 @@ public class AdicionarTIActivity extends Activity {
 			String nome = result[1];
 			Integer tempo = Integer.parseInt(result[2]);
 			Long data = (long) Double.parseDouble(result[3]);
-			Session.getInstancia().getAtividades().add(new Ti(nome, tempo, data, FOTO, PRIORIDADE));
+			Session.getInstancia().getAtividades().add(new Ti(nome, tempo, data, FOTO, PRIORIDADE, COR));
 			dialog.dismiss();
 		}
 

@@ -25,6 +25,8 @@ public class JSONParse {
 	private static final String DATA = "data";
 	private static final String FOTO = "foto";
 	private static final String PRIORIDADE = "prioridade";
+	private static final String COR = "nome";
+	
 
 
 	public JSONParse(String feedUrl) {
@@ -93,7 +95,8 @@ public class JSONParse {
 				convert(item.get(TEMPO), Integer.class),
 				convert(item.get(DATA), Long.class),
 				convert(item.get(FOTO), String.class),
-				convert(item.get(PRIORIDADE), Integer.class));
+				convert(item.get(PRIORIDADE), Integer.class),
+				null);
 	}
 
 	/**

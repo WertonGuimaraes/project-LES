@@ -6,7 +6,7 @@ import com.ufcg.entities.Data;
 
 
 public class Ti {
-	private String nome, foto; 
+	private String nome, foto, cor; 
 	private Integer tempo, prioridade;
 	private Date data;
 	
@@ -17,13 +17,14 @@ public class Ti {
 	 * @param foto
 	 * @param prioridade
 	 */
-	public Ti(String nome, Integer tempo, Long dataMilisegundos, String foto, Integer prioridade) {
+	public Ti(String nome, Integer tempo, Long dataMilisegundos, String foto, Integer prioridade, String cor) {
 		this.nome = nome;
 		this.tempo = tempo;
 		this.data = new Date();
 		this.data.setTime(dataMilisegundos);
 		this.foto = foto;
 		this.prioridade = prioridade;
+		this.cor = cor;
 	}
 
 	public String getNome() {
@@ -64,5 +65,13 @@ public class Ti {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+	
+	public String getCor() {
+		return cor;
+	}
+	
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
 }
