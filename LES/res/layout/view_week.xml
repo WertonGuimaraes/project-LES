@@ -49,6 +49,7 @@
              android:layout_marginTop="30dp"
              android:gravity="center"
              android:text="40"/> <!-- depois sera alterado. So um exemplo -->
+             
             
     </LinearLayout> 
     

@@ -611,10 +611,10 @@ containing a value of this type.
         public static final int Button_AddTI=0x7f040017;
         public static final int Button_ViewWeek=0x7f040018;
         public static final int Comparative_view=0x7f040019;
-        public static final int TextRelatorioSemanal=0x7f040027;
-        public static final int TextTotalHoras=0x7f040029;
-        public static final int TotalHoras=0x7f04002a;
-        public static final int action_settings=0x7f04002c;
+        public static final int TextRelatorioSemanal=0x7f04002b;
+        public static final int TextTotalHoras=0x7f04002d;
+        public static final int TotalHoras=0x7f04002e;
+        public static final int action_settings=0x7f040030;
         public static final int book_now=0x7f040012;
         public static final int botaoOK=0x7f04001d;
         public static final int btn_revoke_access=0x7f040025;
@@ -625,7 +625,8 @@ containing a value of this type.
         public static final int buy_now=0x7f040011;
         public static final int buy_with_google=0x7f040010;
         public static final int classic=0x7f040013;
-        public static final int graph=0x7f040028;
+        public static final int cor=0x7f040027;
+        public static final int graph=0x7f04002c;
         public static final int grayscale=0x7f040014;
         public static final int holo_dark=0x7f040007;
         public static final int holo_light=0x7f040008;
@@ -634,19 +635,22 @@ containing a value of this type.
         public static final int hybrid=0x7f040006;
         public static final int imageView1=0x7f040016;
         public static final int imgProfilePic=0x7f040021;
-        public static final int listview=0x7f04002b;
+        public static final int listWeek=0x7f04002f;
         public static final int llProfile=0x7f040020;
         public static final int match_parent=0x7f04000e;
         public static final int minutes=0x7f04001c;
         public static final int monochrome=0x7f040015;
         public static final int name_ti=0x7f04001a;
+        public static final int nome=0x7f040028;
         public static final int none=0x7f040002;
         public static final int normal=0x7f040003;
         public static final int production=0x7f040009;
+        public static final int proporcao=0x7f04002a;
         public static final int sandbox=0x7f04000a;
         public static final int satellite=0x7f040004;
         public static final int selectionDetails=0x7f04000d;
         public static final int strict_sandbox=0x7f04000b;
+        public static final int tempo=0x7f040029;
         public static final int terrain=0x7f040005;
         public static final int txtEmail=0x7f040023;
         public static final int txtName=0x7f040022;
@@ -661,7 +665,8 @@ containing a value of this type.
         public static final int adicionar_ti=0x7f030001;
         public static final int autenticacao=0x7f030002;
         public static final int login=0x7f030003;
-        public static final int view_week=0x7f030004;
+        public static final int ti_adapter_item=0x7f030004;
+        public static final int view_week=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

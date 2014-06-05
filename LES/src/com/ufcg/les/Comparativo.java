@@ -2,9 +2,14 @@ package com.ufcg.les;
 
 import java.text.Format;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
+
+import com.echo.holographlibrary.PieGraph;
+import com.echo.holographlibrary.PieSlice;
 import com.ufcg.entities.Session;
 import com.ufcg.entities.Ti;
 
@@ -26,7 +31,7 @@ public class Comparativo extends Activity {
 		setContentView(R.layout.view_week);		
 
 		
-		/*PieGraph pg = (PieGraph)findViewById(R.id.graph);
+		PieGraph pg = (PieGraph)findViewById(R.id.graph);
 		PieSlice slice;
 		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 				
@@ -39,7 +44,6 @@ public class Comparativo extends Activity {
 			pg.addSlice(slice);
 			
 		}
-		*/
 	}
 
 

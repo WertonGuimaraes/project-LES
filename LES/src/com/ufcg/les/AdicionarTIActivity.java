@@ -71,6 +71,16 @@ public class AdicionarTIActivity extends Activity {
 				String data = String.valueOf(d.convertDateToMilissegundos());
 				new SalvaJSON().execute(dono, nome.getText().toString(), String.valueOf(tempo), data);
 			} });
+		
+		
+		Button voltar = (Button) findViewById(R.id.BotaoCancelar);
+		voltar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(AdicionarTIActivity.this,MainActivity.class);
+				startActivity(i);
+				finish();
+			} });
 	}
 
 	/**
