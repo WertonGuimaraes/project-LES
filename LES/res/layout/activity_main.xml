@@ -3,37 +3,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    android:gravity="center"
+    android:gravity="center|top"
     android:orientation="vertical"
     tools:context="com.ufcg.les.MainActivity" >
 
     
    <ImageView
        android:id="@+id/imageView1"
-       android:layout_width="fill_parent"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:src="@drawable/nome"
-       android:layout_marginTop="5dp" />
-        
-    <Button
-        android:id="@+id/Button_AddTI"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/add_ti" />
-
+       android:src="@drawable/nome_pequeno"/>
+   
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center">
+       
+       <Button
+        	android:id="@+id/Button_AddTI"
+        	android:layout_width="150dp"
+        	android:layout_height="65dp"
+        	android:text="@string/add_ti" />
+    
+    	<Button
+        	android:id="@+id/Comparative_view"
+        	android:layout_width="150dp"
+        	android:layout_height="65dp"
+        	android:text="@string/compara_semana" />
+    	
+    	<!-- 
     <Button
         android:id="@+id/Button_ViewWeek"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:text="Ver semana" />
+    -->
+       
+   </LinearLayout>
+   
+   <TextView 
+       android:id="@+id/TextRelatorioSemanal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:textSize="20sp"
+       android:layout_marginTop="5dp"
+       android:text="@string/resumo_semanal"/>
     
-    <Button
-        android:id="@+id/Comparative_view"
-        android:layout_width="200dp"
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.echo.holographlibrary.PieGraph
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="135dp"
+        android:id="@+id/graph"/>
+        
+    </LinearLayout>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Comparativo Semanal" />
+        android:orientation="horizontal">
+        
+         <TextView 
+             android:id="@+id/TextTotalHoras"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:layout_marginTop="10dp"
+             android:textSize="20sp"
+             android:textColor="@color/white"
+             android:text="@string/total_horas"/>
+         
+          <TextView 
+             android:id="@+id/TotalHoras"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="22sp"
+             android:textColor="@color/white"
+             android:layout_marginRight="15dp"
+             android:layout_marginTop="10dp"
+             android:gravity="center"/> 
+             
+            
+    </LinearLayout> 
+    
+    <ListView 
+    android:id="@+id/listWeek"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--  cor, nome tarefa, hora e proporcao -->
+        
+    </ListView>
+   
+        
 
 </LinearLayout>

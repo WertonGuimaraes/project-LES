@@ -8,42 +8,42 @@ package com.echo.holographlibrary;
 
 public final class R {
 	public static final class attr {
-		public static final int barAxisColor = 0x7f010007;
-		public static final int barShowAxis = 0x7f010009;
-		public static final int barShowAxisLabel = 0x7f01000a;
-		public static final int barShowPopup = 0x7f01000c;
-		public static final int barShowText = 0x7f01000b;
-		public static final int lineAxisColor = 0x7f010003;
-		public static final int lineStrokeColor = 0x7f010002;
-		public static final int lineStrokeSpacing = 0x7f010005;
-		public static final int lineStrokeWidth = 0x7f010004;
-		public static final int lineUseDip = 0x7f010006;
-		public static final int orientation = 0x7f010008;
-		public static final int pieInnerCircleRatio = 0x7f010000;
-		public static final int pieSlicePadding = 0x7f010001;
+		public static final int barAxisColor = 0x7f010027;
+		public static final int barShowAxis = 0x7f010029;
+		public static final int barShowAxisLabel = 0x7f01002a;
+		public static final int barShowPopup = 0x7f01002c;
+		public static final int barShowText = 0x7f01002b;
+		public static final int lineAxisColor = 0x7f010023;
+		public static final int lineStrokeColor = 0x7f010022;
+		public static final int lineStrokeSpacing = 0x7f010025;
+		public static final int lineStrokeWidth = 0x7f010024;
+		public static final int lineUseDip = 0x7f010026;
+		public static final int orientation = 0x7f010028;
+		public static final int pieInnerCircleRatio = 0x7f010020;
+		public static final int pieSlicePadding = 0x7f010021;
 	}
 	public static final class drawable {
-		public static final int popup_black = 0x7f020037;
+		public static final int popup_black = 0x7f020038;
 	}
 	public static final class id {
-		public static final int horizontal = 0x7f040000;
-		public static final int vertical = 0x7f040001;
+		public static final int horizontal = 0x7f060014;
+		public static final int vertical = 0x7f060015;
 	}
 	public static final class styleable {
-		public static final int[] BarGraph = { 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c };
+		public static final int[] BarGraph = { 0x7f010027, 0x7f010028, 0x7f010029, 0x7f01002a, 0x7f01002b, 0x7f01002c };
 		public static final int BarGraph_barAxisColor = 0;
 		public static final int BarGraph_barShowAxis = 2;
 		public static final int BarGraph_barShowAxisLabel = 3;
 		public static final int BarGraph_barShowPopup = 5;
 		public static final int BarGraph_barShowText = 4;
 		public static final int BarGraph_orientation = 1;
-		public static final int[] LineGraph = { 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006 };
+		public static final int[] LineGraph = { 0x7f010022, 0x7f010023, 0x7f010024, 0x7f010025, 0x7f010026 };
 		public static final int LineGraph_lineAxisColor = 1;
 		public static final int LineGraph_lineStrokeColor = 0;
 		public static final int LineGraph_lineStrokeSpacing = 3;
 		public static final int LineGraph_lineStrokeWidth = 2;
 		public static final int LineGraph_lineUseDip = 4;
-		public static final int[] PieGraph = { 0x7f010000, 0x7f010001 };
+		public static final int[] PieGraph = { 0x7f010020, 0x7f010021 };
 		public static final int PieGraph_pieInnerCircleRatio = 0;
 		public static final int PieGraph_pieSlicePadding = 1;
 	}

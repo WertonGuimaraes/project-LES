@@ -9,6 +9,11 @@
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
     <string name="continar">Continue</string>
+    <string name="add_tempo_investido">Add invested time</string>
+    <string name="nome_ti">Name Ti</string>
+    <string name="compara_semana">Compare weeks</string>
+    <string name="resumo_semanal">Weekly summary</string>
+    <string name="total_horas">Total of invested hours: </string>
     
     <string name="btn_logout_from_google">Logout from Google</string>
     <string name="btn_revoke_access">Revoke Access</string>

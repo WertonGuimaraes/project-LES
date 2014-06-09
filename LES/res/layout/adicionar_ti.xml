@@ -24,11 +24,11 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
         -->
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Adicionar Tempo Investido"
-            android:textSize="30sp" />
+            android:text="@string/add_tempo_investido"
+            android:textSize="30sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-light"
-            android:text="Nome Ti"
+            android:text="@string/nome_ti"
             android:textSize="20sp" />
 
         <MultiAutoCompleteTextView
@@ -91,7 +91,7 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/ok" />
+            android:text="@string/ok"/>
 
         <Button
             android:id="@+id/BotaoCancelar"
