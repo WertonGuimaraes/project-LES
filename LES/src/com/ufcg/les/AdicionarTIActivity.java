@@ -70,6 +70,8 @@ public class AdicionarTIActivity extends Activity {
 				Data d = new Data();
 				String data = String.valueOf(d.convertDateToMilissegundos());
 				new SalvaJSON().execute(dono, nome.getText().toString(), String.valueOf(tempo), data);
+				
+				onBackPressed();
 			} });
 		
 		
@@ -77,9 +79,7 @@ public class AdicionarTIActivity extends Activity {
 		voltar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(AdicionarTIActivity.this,MainActivity.class);
-				startActivity(i);
-				finish();
+				onBackPressed();
 			} });
 	}
 

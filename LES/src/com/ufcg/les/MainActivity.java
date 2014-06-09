@@ -103,7 +103,6 @@ public class MainActivity extends Activity {
 			for (Entry<String, Integer> entry : titempo.entrySet()) {  
 				tiprop.put(entry.getKey(), entry.getValue()/tempoTotalInvestido);   
 			}
-			
 			return tiprop;
 		}
 }
