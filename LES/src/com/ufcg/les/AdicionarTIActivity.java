@@ -32,7 +32,7 @@ public class AdicionarTIActivity extends Activity {
 	private Context mContext;
 
 	/**
-	 * O metodo será responsavel por criar todo o conteudo da tela.
+	 * O metodo será responsavel por criar o conteudo da tela.
 	 * @param savedInstanceState
 	 *
 	 */
@@ -110,7 +110,7 @@ public class AdicionarTIActivity extends Activity {
 			super.onPostExecute(result);
 			String nome = result[1];
 			Long data = (long) Double.parseDouble(result[3]);
-			if (result[4].equals("true")) {
+			if (Boolean.parseBoolean(result[4])) {
 				Session.getInstancia().getAtividades().add(new Ti(nome, Integer.parseInt(result[2]), data, FOTO, PRIORIDADE, COR));
 				Toast.makeText(mContext, "Tempo investido adicionado com SUCESSO!", Toast.LENGTH_LONG).show();
 			} else {
@@ -120,7 +120,7 @@ public class AdicionarTIActivity extends Activity {
 		}
 
 		/**
-		 * O método salavará a atividade no BD.
+		 * O metodo salavará a atividade no BD.
 		 *
 		 * @paramdono: é quem es.tá logado;
 		 * @paramnome: é o nome da atividade;

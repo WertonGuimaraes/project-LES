@@ -2,20 +2,23 @@ package com.ufcg.entities;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Session {
 
-	public static Session instancia;
+	private static Session instancia;
 	private String dono;
-	private ArrayList<Ti> atividades;
+	private List<Ti> atividades;
 
 	protected Session() {
 		atividades = new ArrayList<Ti>();
 	}
 
 	public static Session getInstancia() {
-		if (instancia == null)
+		if (instancia == null) {
 			instancia = new Session();
+		}
 		return instancia;
 	}
 	
@@ -23,7 +26,7 @@ public class Session {
 		instancia = null;
 	}
 	
-	public ArrayList<Ti> getAtividades() {
+	public List<Ti> getAtividades() {
 		return atividades;
 	}
 	
@@ -35,8 +38,8 @@ public class Session {
 		return dono;
 	}
 	
-	public ArrayList<Ti> atividadesDaSemana() {
-		ArrayList<Ti> resposta = new ArrayList<Ti>();
+	public List<Ti> atividadesDaSemana() {
+		List<Ti> resposta = new ArrayList<Ti>();
 		for (Ti ti : atividades) {
 			if(Data.isSemana(ti.getData())){
 				resposta.add(ti);
@@ -45,8 +48,8 @@ public class Session {
 		return resposta;
 	}
 	
-	public ArrayList<Ti> atividadesDaSemanaPassada() {
-		ArrayList<Ti> resposta = new ArrayList<Ti>();
+	public List<Ti> atividadesDaSemanaPassada() {
+		List<Ti> resposta = new ArrayList<Ti>();
 		for (Ti ti : atividades) {
 			if(Data.is2SemanasPassada(ti.getData())){
 				resposta.add(ti);
@@ -55,8 +58,8 @@ public class Session {
 		return resposta;
 	}
 	
-	public HashMap<String, Integer> resumeAtividades(ArrayList<Ti> atividades) {
-		HashMap<String, Integer> resposta = new HashMap<String, Integer>();
+	public Map<String, Integer> resumeAtividades(List<Ti> atividades) {
+		Map<String, Integer> resposta = new HashMap<String, Integer>();
 		
 		for (Ti ti : atividades) {
 			String nome = ti.getNome();

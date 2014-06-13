@@ -2,6 +2,7 @@ package com.ufcg.les;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -113,7 +114,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 		});*/
 	}
 	
-	private class CapturaJSON extends AsyncTask<String, Void, ArrayList<Ti>> {
+	private class CapturaJSON extends AsyncTask<String, Void, List<Ti>> {
 		private ProgressDialog dialog;
 
 		@Override
@@ -123,13 +124,12 @@ ConnectionCallbacks, OnConnectionFailedListener{
 		}
 
 		@Override
-		protected ArrayList<Ti> doInBackground(String... params) {
-			Log.d("werton", "parans: "+ params[0]);
+		protected List<Ti> doInBackground(String... params) {
 			return getJSON(params[0]);
 		}
 
 		@Override
-		protected void onPostExecute(ArrayList<Ti> result) {
+		protected void onPostExecute(List<Ti> result) {
 			super.onPostExecute(result);
 			
 			Session.getInstancia().delInstancia();
@@ -144,11 +144,11 @@ ConnectionCallbacks, OnConnectionFailedListener{
 			dialog.dismiss();
 		}
 
-		private ArrayList<Ti> getJSON(String dono) {
+		private List<Ti> getJSON(String dono) {
 			JSONParse parser = new JSONParse(
 					"http://150.165.98.11:8080/povmt/atividade/recuperaAtividades?dono="
 							+ dono);
-			return parser.TiPars();
+			return parser.tiPars();
 		}
 	}
 	

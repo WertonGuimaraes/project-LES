@@ -2,15 +2,11 @@ package com.ufcg.les;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.Map.Entry;
 
-import com.echo.holographlibrary.PieGraph;
-import com.echo.holographlibrary.PieSlice;
-import com.ufcg.entities.Session;
-import com.ufcg.entities.Ti;
-
+import util.Cor;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,6 +15,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.echo.holographlibrary.PieGraph;
+import com.echo.holographlibrary.PieSlice;
+import com.ufcg.entities.Session;
+import com.ufcg.entities.Ti;
 
 
 public class MainActivity extends Activity {
@@ -52,16 +53,16 @@ public class MainActivity extends Activity {
 		
 		PieGraph pg = (PieGraph)findViewById(R.id.graph);
 		PieSlice slice;
-		ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
-		ArrayList<Ti> TiAdapter = new ArrayList<Ti>();
+		List<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
+		List<Ti> tiAdapter = new ArrayList<Ti>();
 		int tempoTotal = 0;
 		
 		for (Entry<String, Integer> entry : Session.getInstancia().resumeAtividades(atividadesDaSemana).entrySet()) {
 			slice = new PieSlice();
-			String cor = geraCor();
+			String cor = (new Cor()).getCor();
 			slice.setColor(Color.parseColor(cor));
 			slice.setValue(entry.getValue());
-			TiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", 0, cor)); 
+			tiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", 0, cor)); 
 			tempoTotal += entry.getValue();
 			pg.addSlice(slice);
 		}
@@ -69,26 +70,14 @@ public class MainActivity extends Activity {
 		TextView totalDeHoras = (TextView) findViewById(R.id.TotalHoras);
 		totalDeHoras.setText(String.format("%.2f", (float)tempoTotal/60));
 		
-		TiAdapter adapter = new TiAdapter(getApplicationContext(), TiAdapter, tempoTotal);
+		TiAdapter adapter = new TiAdapter(getApplicationContext(), tiAdapter, tempoTotal);
 		list.setAdapter(adapter);
 		
 	}
 	
-	private String geraCor() {
-		
-		Random randCol = new Random();  
-		String r = Integer.toHexString(randCol.nextInt(256));
-		if(r.length() ==1)	r = "0" +r;
-		String g = Integer.toHexString(randCol.nextInt(256));  
-		if(g.length() ==1)	g = "0" +g;
-		String b = Integer.toHexString(randCol.nextInt(256));  
-		if(b.length() ==1)	b = "0" +b;
-		return "#"+r+g+b; 
-	}
-	
 	// lembrar de fazer o ranking e proporção de horas
 		private Map retornaRanking() {
-			ArrayList<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
+			List<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 			Map<String, Integer> titempo = new HashMap<String, Integer>();
 			Map<String, Integer> tiprop = new HashMap<String, Integer>();
 			

@@ -7,14 +7,13 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.ufcg.entities.Ti;
-
-import android.util.Log;
 
 
 public class JSONParse {
@@ -25,7 +24,6 @@ public class JSONParse {
 	private static final String DATA = "data";
 	private static final String FOTO = "foto";
 	private static final String PRIORIDADE = "prioridade";
-	private static final String COR = "nome";
 	
 	private boolean adicionou;
 	
@@ -34,7 +32,7 @@ public class JSONParse {
 		adicionou = true;
 		try {
 			this.feedUrl = new URL(feedUrl);
-			JSON();
+			json();
 		} catch (MalformedURLException e) {
 			adicionou = false;
 		}
@@ -44,11 +42,10 @@ public class JSONParse {
 		return adicionou;
 	}
 
-	private void JSON() {
+	private void json() {
 		try {
 			String jsonString = convertStreamToString(feedUrl.openConnection().getInputStream());
 			json = new JSONArray(jsonString);
-			Log.d("werton", json+"");
 		} catch (JSONException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -77,8 +74,8 @@ public class JSONParse {
 		return sBuf.toString();
 	}
 
-	public ArrayList<Ti> TiPars() {
-		ArrayList<Ti> temposInvestidos = new ArrayList<Ti>();
+	public List<Ti> tiPars() {
+		List<Ti> temposInvestidos = new ArrayList<Ti>();
 
 		if(json != null){
 			for (int i = 0; i < json.length(); i++) {
@@ -87,7 +84,6 @@ public class JSONParse {
 					item = json.getJSONObject(i);
 					temposInvestidos.add(recuperaTi(item));
 				} catch (JSONException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	
@@ -115,9 +111,10 @@ public class JSONParse {
 	 */
 	@SuppressWarnings("unchecked")
 	private <T> T convert(Object obj, Class<T> type) {
-		if (obj.toString() == "null") 
+		if (obj == null) {
 			return null;        
-		return ((T) obj);
+		}
+		return (T) obj;
 	}
 
 }

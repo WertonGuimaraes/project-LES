@@ -4,10 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import android.util.Log;
-
 public class Data {
-
 	private Calendar data;
 
 	public Data() {
