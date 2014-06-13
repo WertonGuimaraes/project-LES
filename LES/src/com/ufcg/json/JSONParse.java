@@ -97,8 +97,8 @@ public class JSONParse {
 		return new Ti(convert(item.get(NOME), String.class),
 				convert(item.get(TEMPO), Integer.class),
 				convert(item.get(DATA), Long.class),
-				convert(item.get(FOTO), String.class),
-				convert(item.get(PRIORIDADE), Integer.class),
+				null,
+				1,
 				null);
 	}
 
