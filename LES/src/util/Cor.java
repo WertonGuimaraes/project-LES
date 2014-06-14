@@ -24,7 +24,7 @@ public class Cor {
 		if (b.length() == 1) {
 			b = "0" + b;
 		}
-		return "#" + r + g + b;
+		return r + g + b;
 	}
 	
 	public String getCor() {

@@ -1,5 +1,9 @@
 package com.ufcg.les;
 
+import java.util.List;
+
+import util.Cor;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -32,7 +36,7 @@ public class AdicionarTIActivity extends Activity {
 	private Context mContext;
 
 	/**
-	 * O metodo será responsavel por criar o conteudo da tela.
+	 * O metodo serï¿½ responsavel por criar o conteudo da tela.
 	 * @param savedInstanceState
 	 *
 	 */
@@ -85,7 +89,7 @@ public class AdicionarTIActivity extends Activity {
 
 	/**
 	 *
-	 * É uma inerclass que tem por objetivo salvar uma atividade no BD.
+	 * ï¿½ uma inerclass que tem por objetivo salvar uma atividade no BD.
 	 * @author Werton
 	 *
 	 */
@@ -120,16 +124,24 @@ public class AdicionarTIActivity extends Activity {
 		}
 
 		/**
-		 * O metodo salavará a atividade no BD.
+		 * O metodo salavara a atividade no BD.
 		 *
-		 * @paramdono: é quem es.tá logado;
-		 * @paramnome: é o nome da atividade;
-		 * @paramtempo: é o tempo que a atividade conseumiu em minutos;
-		 * @paramdata: a data da criação da atividade em milissegundos;
-		 * @return se a atividade foi criada ou não.
+		 * @paramdono: ï¿½ quem es.tï¿½ logado;
+		 * @paramnome: ï¿½ o nome da atividade;
+		 * @paramtempo: ï¿½ o tempo que a atividade conseumiu em minutos;
+		 * @paramdata: a data da criaï¿½ï¿½o da atividade em milissegundos;
+		 * @return se a atividade foi criada ou nï¿½o.
 		 */
 		private boolean salvaTi(String dono, String nome, String tempo, String data) {
-			String url = "http://150.165.98.11:8080/povmt/atividade/salvarAtividade?dono=" + dono +	"&nome=" + nome + "&tempo=" + tempo + "&data=" + data;
+			List<Ti> tis = Session.getInstancia().getAtividades();
+			String cor = (new Cor()).getCor();
+			for (Ti ti : tis) {
+				if(ti.getNome().equals(nome)){
+					cor = ti.getFoto();
+					break;
+				}
+			}
+			String url = "http://150.165.98.11:8080/povmt/atividade/salvarAtividade?dono=" + dono +	"&nome=" + nome + "&tempo=" + tempo + "&data=" + data+ "&foto=" + cor;
 			JSONParse json = new JSONParse(url);
 			return json.getAdicionou();
 		}

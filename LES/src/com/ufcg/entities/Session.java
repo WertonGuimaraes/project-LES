@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.util.Log;
+
 public class Session {
 
 	private static Session instancia;
@@ -70,6 +72,17 @@ public class Session {
 			resposta.put(nome, resposta.get(nome)+tempo);
 		}
 		return resposta;
+	}
+	
+	public String recuperaCor(String nomeDaTi) {
+		String cor = null;
+		for (Ti ti : getAtividades()) {
+			if(ti.getNome().equals(nomeDaTi)){
+				cor = ti.getFoto();
+				break;
+			}
+		}
+		return cor;
 	}
 }
 
