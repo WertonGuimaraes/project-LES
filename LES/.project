@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Cronus</name>
+	<name>ProjetoPiloto</name>
 	<comment></comment>
 	<projects>
+		<project>com.ufcg.les.Login</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
