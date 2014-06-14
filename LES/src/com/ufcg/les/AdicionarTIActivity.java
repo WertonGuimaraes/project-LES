@@ -94,6 +94,7 @@ public class AdicionarTIActivity extends Activity {
 	 */
 	private class SalvaJSON extends AsyncTask<String, Void, String[]> {
 		private ProgressDialog dialog;
+		private String cor;
 
 		@Override
 		protected void onPreExecute() {
@@ -104,7 +105,7 @@ public class AdicionarTIActivity extends Activity {
 		@Override
 		protected String[] doInBackground(String... params) {
 			boolean wasAdd = salvaTi(params[0], params[1], params[2], params[3]);
-			String[] retorno = {params[0], params[1], params[2], params[3], String.valueOf(wasAdd)};
+			String[] retorno = {params[0], params[1], params[2], params[3], String.valueOf(wasAdd), cor};
 			return retorno;
 		}
 
@@ -113,8 +114,9 @@ public class AdicionarTIActivity extends Activity {
 			super.onPostExecute(result);
 			String nome = result[1];
 			Long data = (long) Double.parseDouble(result[3]);
+			String cor = result[5];
 			if (Boolean.parseBoolean(result[4])) {
-				Session.getInstancia().getAtividades().add(new Ti(nome, Integer.parseInt(result[2]), data, FOTO, PRIORIDADE, COR));
+				Session.getInstancia().getAtividades().add(new Ti(nome, Integer.parseInt(result[2]), data, cor, PRIORIDADE, COR));
 				Toast.makeText(mContext, "Tempo investido adicionado com SUCESSO!", Toast.LENGTH_LONG).show();
 			} else {
 				Toast.makeText(mContext, "Tempo investido FALHOU ao ser adicionado.", Toast.LENGTH_LONG).show();
@@ -133,14 +135,7 @@ public class AdicionarTIActivity extends Activity {
 		 * @return se a atividade foi criada ou n�o.
 		 */
 		private boolean salvaTi(String dono, String nome, String tempo, String data) {
-			List<Ti> tis = Session.getInstancia().getAtividades();
-			String cor = (new Cor()).getCor();
-			for (Ti ti : tis) {
-				if(ti.getNome().equals(nome)){
-					cor = ti.getFoto();
-					break;
-				}
-			}
+			cor = Session.getInstancia().recuperaCor(nome);
 			String url = "http://150.165.98.11:8080/povmt/atividade/salvarAtividade?dono=" + dono +	"&nome=" + nome + "&tempo=" + tempo + "&data=" + data+ "&foto=" + cor;
 			JSONParse json = new JSONParse(url);
 			return json.getAdicionou();

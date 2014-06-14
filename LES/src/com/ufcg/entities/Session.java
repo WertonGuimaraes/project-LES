@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import util.Cor;
+
 import android.util.Log;
 
 public class Session {
@@ -75,9 +77,10 @@ public class Session {
 	}
 	
 	public String recuperaCor(String nomeDaTi) {
-		String cor = null;
+		String cor = (new Cor()).getCor();
 		for (Ti ti : getAtividades()) {
 			if(ti.getNome().equals(nomeDaTi)){
+				Log.d("werton", ti.getFoto());
 				cor = ti.getFoto();
 				break;
 			}

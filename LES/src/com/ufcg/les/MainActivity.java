@@ -60,7 +60,9 @@ public class MainActivity extends Activity {
 		
 		for (Entry<String, Integer> entry : Session.getInstancia().resumeAtividades(atividadesDaSemana).entrySet()) {
 			slice = new PieSlice();
+			Log.d("werton", entry.getKey());
 			String cor = "#"+Session.getInstancia().recuperaCor(entry.getKey());
+			Log.d("werton", cor);
 			slice.setColor(Color.parseColor(cor));
 			slice.setValue(entry.getValue());
 			tiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", 0, cor)); 
