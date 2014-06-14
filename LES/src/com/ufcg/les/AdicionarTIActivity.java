@@ -71,7 +71,6 @@ public class AdicionarTIActivity extends Activity {
 				String data = String.valueOf(d.convertDateToMilissegundos());
 				new SalvaJSON().execute(dono, nome.getText().toString(), String.valueOf(tempo), data);
 				
-				onBackPressed();
 			} });
 		
 		
@@ -117,6 +116,7 @@ public class AdicionarTIActivity extends Activity {
 				Toast.makeText(mContext, "Tempo investido FALHOU ao ser adicionado.", Toast.LENGTH_LONG).show();
 			}
 			dialog.dismiss();
+			onBackPressed();
 		}
 
 		/**

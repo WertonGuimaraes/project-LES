@@ -23,13 +23,13 @@
        <Button
         	android:id="@+id/Button_AddTI"
         	android:layout_width="150dp"
-        	android:layout_height="65dp"
+        	android:layout_height="60dp"
         	android:text="@string/add_ti" />
     
     	<Button
         	android:id="@+id/Comparative_view"
         	android:layout_width="150dp"
-        	android:layout_height="65dp"
+        	android:layout_height="60dp"
         	android:text="@string/compara_semana" />
     	
     	<!-- 
@@ -48,7 +48,7 @@
        android:layout_height="wrap_content"
        android:gravity="center"
        android:textSize="20sp"
-       android:layout_marginTop="20dp"
+       android:layout_marginTop="15dp"
        android:text="@string/resumo_semanal"/>
     
     
