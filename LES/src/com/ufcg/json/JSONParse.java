@@ -13,6 +13,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 import com.ufcg.entities.Ti;
 
 
@@ -22,7 +24,7 @@ public class JSONParse {
 	private static final String NOME = "nome";
 	private static final String TEMPO = "tempo";
 	private static final String DATA = "data";
-	private static final String FOTO = "foto";
+	private static final String COR = "foto";
 	private static final String PRIORIDADE = "prioridade";
 	
 	private boolean adicionou;
@@ -97,7 +99,7 @@ public class JSONParse {
 		return new Ti(convert(item.get(NOME), String.class),
 				convert(item.get(TEMPO), Integer.class),
 				convert(item.get(DATA), Long.class),
-				null,
+				convert(item.get(COR), String.class),
 				1,
 				null);
 	}
@@ -106,9 +108,10 @@ public class JSONParse {
 	 * O metodo Auxiliar que converte um Objeto do JSON para um tipo especificado.
 	 * 
 	 * @param obj - O objesto do JSON.
-	 * @param type - O tipo que ser� o Objeto.
+	 * @param type - O tipo que sera o Objeto.
 	 * @return O objeto convertido com algum tipo.
 	 */
+	
 	@SuppressWarnings("unchecked")
 	private <T> T convert(Object obj, Class<T> type) {
 		if (obj == null) {

@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -59,7 +60,7 @@ public class MainActivity extends Activity {
 		
 		for (Entry<String, Integer> entry : Session.getInstancia().resumeAtividades(atividadesDaSemana).entrySet()) {
 			slice = new PieSlice();
-			String cor = (new Cor()).getCor();
+			String cor = "#"+Session.getInstancia().recuperaCor(entry.getKey());
 			slice.setColor(Color.parseColor(cor));
 			slice.setValue(entry.getValue());
 			tiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", 0, cor)); 
@@ -75,7 +76,7 @@ public class MainActivity extends Activity {
 		
 	}
 	
-	// lembrar de fazer o ranking e proporção de horas
+	// lembrar de fazer o ranking e proporï¿½ï¿½o de horas
 		private Map retornaRanking() {
 			List<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 			Map<String, Integer> titempo = new HashMap<String, Integer>();
@@ -88,7 +89,7 @@ public class MainActivity extends Activity {
 				tempoTotalInvestido += ti.getTempo();
 			}
 			
-			// mapa com as atividades e proporção do tempo das atividades
+			// mapa com as atividades e proporï¿½ï¿½o do tempo das atividades
 			for (Entry<String, Integer> entry : titempo.entrySet()) {  
 				tiprop.put(entry.getKey(), entry.getValue()/tempoTotalInvestido);   
 			}
