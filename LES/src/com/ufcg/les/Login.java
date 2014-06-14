@@ -132,7 +132,7 @@ ConnectionCallbacks, OnConnectionFailedListener{
 		protected void onPostExecute(List<Ti> result) {
 			super.onPostExecute(result);
 			
-			Session.getInstancia().delInstancia();
+			Session.delInstancia();
 			Session.getInstancia().setDono(email); //login.getText().toString()
 			
 			for (Ti ti : result) {

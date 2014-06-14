@@ -22,7 +22,7 @@ public class Session {
 		return instancia;
 	}
 	
-	public void delInstancia(){
+	public static void delInstancia(){
 		instancia = null;
 	}
 	
