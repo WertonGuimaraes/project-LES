@@ -4,6 +4,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import android.util.Log;
+
 public class Data {
 	private Calendar data;
 
@@ -42,19 +44,24 @@ public class Data {
 	
 	public static boolean isSemana(Date date){
 		Data dataAtual = new Data();
-		long estremo1 = convertDateToMilissegundos(somarData(-6, dataAtual.getData()));
-		long estremo2 = convertDateToMilissegundos(somarData(1, dataAtual.getData()));
+		Integer dia  = dataAtual.getData().get(Calendar.DAY_OF_WEEK);
+		long estremo1 = convertDateToMilissegundos(somarData(-(dia), dataAtual.getData()));
+		long estremo2 = convertDateToMilissegundos(somarData(7-(dia), dataAtual.getData()));
 		long dataParaComparacao = date.getTime();
 		
-		return estremo1 <= dataParaComparacao &&  dataParaComparacao< estremo2;
+		return estremo1 < dataParaComparacao &&  dataParaComparacao<= estremo2;
 	}
 	
 	public static boolean is2SemanasPassada(Date date){
 		Data dataAtual = new Data();
-		long estremo1 = convertDateToMilissegundos(somarData(-20, dataAtual.getData()));
-		long estremo2 = convertDateToMilissegundos(somarData(-6, dataAtual.getData()));
+		dataAtual.getData();
+		Integer dia  = dataAtual.getData().get(Calendar.DAY_OF_WEEK);
+		long estremo1 = convertDateToMilissegundos(somarData(-(dia + 14), dataAtual.getData()));
+		long estremo2 = convertDateToMilissegundos(somarData(-(dia), dataAtual.getData()));
 		long dataParaComparacao = date.getTime();
 		
-		return estremo1 <= dataParaComparacao &&  dataParaComparacao< estremo2;
+		return estremo1 < dataParaComparacao &&  dataParaComparacao<= estremo2;
 	}
+	
+	
 }

@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
+import com.ufcg.entities.Data;
 import com.ufcg.entities.Session;
 import com.ufcg.entities.Ti;
 
