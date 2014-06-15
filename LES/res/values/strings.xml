@@ -14,6 +14,12 @@
     <string name="compara_semana">Compare weeks</string>
     <string name="resumo_semanal">Weekly summary</string>
     <string name="total_horas">Total of invested hours: </string>
+    <string name="prioridade">Priority: </string> 
+	<string-array name="priority_array">
+  		<item>High</item> 
+ 		<item>Medium</item> 
+		<item>Low</item> 
+ 	</string-array>
     
     <string name="btn_logout_from_google">Logout from Google</string>
     <string name="btn_revoke_access">Revoke Access</string>
