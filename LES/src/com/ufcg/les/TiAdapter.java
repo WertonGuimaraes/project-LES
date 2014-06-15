@@ -51,8 +51,11 @@ public class TiAdapter extends BaseAdapter {
 		TextView tvNome = (TextView) view.findViewById(R.id.nome);
 		tvNome.setText("Nome: " + ti.getNome());
 		
-		TextView tvtempo = (TextView) view.findViewById(R.id.tempo);
-		tvtempo.setText("Tempo total: " + ti.getTempo());
+		TextView tvTempo = (TextView) view.findViewById(R.id.tempo);
+		tvTempo.setText("Tempo total: " + ti.getTempo());
+		
+		TextView tvPrioridade = (TextView) view.findViewById(R.id.prioridade);
+		tvPrioridade.setText("Prioridade: " + ti.getPrioridade());
 		
 		TextView tvProporcao = (TextView) view.findViewById(R.id.proporcao);
 		String prop = String.valueOf((ti.getTempo()/(float) tempoTotal)*100);

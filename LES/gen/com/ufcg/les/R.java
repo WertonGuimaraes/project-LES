@@ -617,7 +617,7 @@ containing a value of this type.
         public static final int TextRelatorioSemanal=0x7f060019;
         public static final int TextTotalHoras=0x7f06001b;
         public static final int TotalHoras=0x7f06001c;
-        public static final int action_settings=0x7f060032;
+        public static final int action_settings=0x7f060033;
         public static final int book_now=0x7f060010;
         public static final int botaoOK=0x7f060023;
         public static final int btn_revoke_access=0x7f06002b;
@@ -649,9 +649,10 @@ containing a value of this type.
         public static final int nome=0x7f06002f;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
+        public static final int prioridade=0x7f060031;
         public static final int priority=0x7f060020;
         public static final int production=0x7f060007;
-        public static final int proporcao=0x7f060031;
+        public static final int proporcao=0x7f060032;
         public static final int sandbox=0x7f060008;
         public static final int satellite=0x7f060002;
         public static final int selectionDetails=0x7f06000b;

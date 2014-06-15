@@ -51,16 +51,24 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
             android:layout_height="wrap_content" 
             android:gravity="center" 
             android:orientation="horizontal">
+ 			
  			<TextView android:id="@+id/name_priority" 
- 			    android:layout_width="0dp" 
  			    android:layout_height="wrap_content" 
- 			    android:layout_weight="0.60" 
+ 			    android:layout_width="0dp" 
+ 			    android:layout_weight="0.60"
+ 			    android:layout_marginTop="15dp"
+ 			    android:fontFamily="sans-serif-light"
+ 			    android:textSize="20sp" 
  			    android:text="@string/prioridade" 
  			    android:layout_marginLeft="10dp" /> 
-  			<Spinner android:id="@+id/priority" 
-  			    android:layout_width="0dp" 
-  			    android:layout_height="wrap_content" 
-  			    android:layout_weight="0.40" /> 
+
+  			<Spinner
+  			    android:id="@+id/priority"
+  			    android:layout_width="0dp"
+  			    android:layout_height="wrap_content"
+  			    android:layout_marginTop="15dp"
+  			    android:layout_weight="0.97" />
+ 
   			</LinearLayout>
         
     </LinearLayout>
