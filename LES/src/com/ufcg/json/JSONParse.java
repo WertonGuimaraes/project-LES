@@ -96,7 +96,10 @@ public class JSONParse {
 	}
 
 	private Ti recuperaTi(JSONObject item) throws JSONException {
-		return new Ti(convert(item.get(NOME), String.class),
+		String nome = convert(item.get(NOME), String.class);
+		nome = mudaCaractere(nome, "_", " ");	
+		
+		return new Ti(nome,
 				convert(item.get(TEMPO), Integer.class),
 				convert(item.get(DATA), Long.class),
 				convert(item.get(COR), String.class),
@@ -118,6 +121,11 @@ public class JSONParse {
 			return null;        
 		}
 		return (T) obj;
+	}
+	
+	public String mudaCaractere(String str, String antigo, String novo){
+		str = str.replace(antigo, novo);
+		return str;
 	}
 
 }

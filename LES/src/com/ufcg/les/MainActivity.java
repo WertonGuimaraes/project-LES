@@ -41,15 +41,6 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		/*Button semana = (Button) findViewById(R.id.Button_ViewWeek);
-		semana.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this,Semana.class);
-				startActivity(i);
-				finish();
-			}
-		});*/
 		
 		ListView list = (ListView) findViewById(R.id.listWeek);
 		

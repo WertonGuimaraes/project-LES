@@ -95,7 +95,7 @@ public class AdicionarTIActivity extends Activity {
 				Data d = new Data();
 				String data = String.valueOf(d.convertDateToMilissegundos());
 				String prior = String.valueOf(prioridade);
-				new SalvaJSON().execute(dono, nome.getText().toString(), String.valueOf(tempo), data, prior);
+				new SalvaJSON().execute(dono, nome.getText().toString().trim(), String.valueOf(tempo), data, prior);
 			} });
 
 
@@ -161,6 +161,9 @@ public class AdicionarTIActivity extends Activity {
 		 */
 		private boolean salvaTi(String dono, String nome, String tempo, String data, String prioridade) {
 			cor = Session.getInstancia().recuperaCor(nome);
+			
+			nome = mudaCaractere(nome, " ", "_");
+			
 			String url = "http://150.165.98.11:8080/povmt/atividade/salvarAtividade?dono=" + dono +	"&nome="
 					+ nome + "&tempo=" + tempo + "&data=" + data + "&prioridade=" + prioridade 
 					+"&foto=" + cor;
@@ -175,4 +178,10 @@ public class AdicionarTIActivity extends Activity {
 		startActivity(intent);
 		finish();
 	}
+	
+	public String mudaCaractere(String str, String antigo, String novo){
+		str = str.replace(antigo, novo);
+		return str;
+	}
+	
 }
