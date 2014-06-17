@@ -87,5 +87,15 @@ public class Session {
 		}
 		return cor;
 	}
+	public int recuperaPrioridade(String nomeDaTi) {
+		int prior = 0;
+		for (Ti ti : getAtividades()) {
+			if(ti.getNome().equals(nomeDaTi)){
+				Log.d("werton", ti.getFoto());
+				prior = ti.getPrioridade();
+				break;
+			}
+		}
+		return prior;
+	}
 }
-

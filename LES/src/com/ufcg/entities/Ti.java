@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Ti {
 	private String nome, foto, cor; 
-	private Integer tempo, prioridade;
+	private int tempo, prioridade;
 	private Date data;
 	
 	/**
@@ -15,7 +15,7 @@ public class Ti {
 	 * @param foto
 	 * @param prioridade
 	 */
-	public Ti(String nome, Integer tempo, Long dataMilisegundos, String foto, Integer prioridade, String cor) {
+	public Ti(String nome, int tempo, Long dataMilisegundos, String foto, int prioridade, String cor) {
 		this.nome = nome;
 		this.tempo = tempo;
 		this.data = new Date();

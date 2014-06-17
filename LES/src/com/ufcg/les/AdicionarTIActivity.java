@@ -60,7 +60,7 @@ public class AdicionarTIActivity extends Activity {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View v, int posicao, long id) {
-				prioridade = posicao + 1;
+				prioridade = posicao;
 			}
 			@Override
 			public void onNothingSelected(AdapterView<?> parent) {}

@@ -100,7 +100,7 @@ public class JSONParse {
 				convert(item.get(TEMPO), Integer.class),
 				convert(item.get(DATA), Long.class),
 				convert(item.get(COR), String.class),
-				1,
+				convert(item.get(PRIORIDADE), Integer.class),
 				null);
 	}
 
