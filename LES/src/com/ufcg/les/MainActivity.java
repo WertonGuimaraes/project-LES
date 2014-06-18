@@ -41,15 +41,6 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		/*Button semana = (Button) findViewById(R.id.Button_ViewWeek);
-		semana.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this,Semana.class);
-				startActivity(i);
-				finish();
-			}
-		});*/
 		
 		ListView list = (ListView) findViewById(R.id.listWeek);
 		
@@ -64,9 +55,10 @@ public class MainActivity extends Activity {
 			Log.d("werton", entry.getKey());
 			String cor = "#"+Session.getInstancia().recuperaCor(entry.getKey());
 			Log.d("werton", cor);
+			int prior = Session.getInstancia().recuperaPrioridade(entry.getKey());
 			slice.setColor(Color.parseColor(cor));
 			slice.setValue(entry.getValue());
-			tiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", 0, cor)); 
+			tiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", prior, cor)); 
 			tempoTotal += entry.getValue();
 			pg.addSlice(slice);
 		}
