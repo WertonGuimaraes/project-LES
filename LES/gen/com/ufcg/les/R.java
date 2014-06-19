@@ -613,26 +613,26 @@ containing a value of this type.
     public static final class id {
         public static final int BotaoCancelar=0x7f060024;
         public static final int Button_AddTI=0x7f060017;
-        public static final int Button_AddTI2=0x7f060034;
+        public static final int Button_AddTI2=0x7f060036;
         public static final int Comparative_view=0x7f060018;
         public static final int TextRelatorioSemanal=0x7f060019;
         public static final int TextTotalHoras=0x7f06001b;
         public static final int TotalHoras=0x7f06001c;
-        public static final int Voltar=0x7f060035;
-        public static final int action_settings=0x7f060036;
+        public static final int Voltar=0x7f060037;
+        public static final int action_settings=0x7f060038;
         public static final int book_now=0x7f060010;
         public static final int botaoOK=0x7f060023;
         public static final int btn_revoke_access=0x7f06002b;
-        public static final int btn_sign_in=0x7f06002d;
+        public static final int btn_sign_in=0x7f060030;
         public static final int btn_sign_out=0x7f06002a;
         public static final int buttonContinuar=0x7f060025;
         public static final int buyButton=0x7f06000a;
         public static final int buy_now=0x7f06000f;
         public static final int buy_with_google=0x7f06000e;
+        public static final int check=0x7f06002e;
         public static final int classic=0x7f060011;
-        public static final int cor=0x7f06002e;
+        public static final int cor=0x7f06002c;
         public static final int graph=0x7f06001a;
-        public static final int graph2=0x7f06002c;
         public static final int grayscale=0x7f060012;
         public static final int holo_dark=0x7f060005;
         public static final int holo_light=0x7f060006;
@@ -641,6 +641,7 @@ containing a value of this type.
         public static final int hybrid=0x7f060004;
         public static final int imageView1=0x7f060016;
         public static final int imgProfilePic=0x7f060027;
+        public static final int listNamesTi=0x7f06002f;
         public static final int listWeek=0x7f06001d;
         public static final int llProfile=0x7f060026;
         public static final int match_parent=0x7f06000c;
@@ -648,20 +649,21 @@ containing a value of this type.
         public static final int monochrome=0x7f060013;
         public static final int name_priority=0x7f06001f;
         public static final int name_ti=0x7f06001e;
-        public static final int nome=0x7f06002f;
+        public static final int nome=0x7f060031;
+        public static final int nomeCompare=0x7f06002d;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int prioridade=0x7f060031;
+        public static final int prioridade=0x7f060033;
         public static final int priority=0x7f060020;
         public static final int production=0x7f060007;
-        public static final int proporcao=0x7f060032;
+        public static final int proporcao=0x7f060034;
         public static final int sandbox=0x7f060008;
         public static final int satellite=0x7f060002;
         public static final int selectionDetails=0x7f06000b;
         public static final int strict_sandbox=0x7f060009;
-        public static final int tempo=0x7f060030;
+        public static final int tempo=0x7f060032;
         public static final int terrain=0x7f060003;
-        public static final int textView1=0x7f060033;
+        public static final int textView1=0x7f060035;
         public static final int txtEmail=0x7f060029;
         public static final int txtName=0x7f060028;
         public static final int vertical=0x7f060015;
@@ -674,11 +676,12 @@ containing a value of this type.
         public static final int activity_main=0x7f030000;
         public static final int adicionar_ti=0x7f030001;
         public static final int autenticacao=0x7f030002;
-        public static final int compare_week=0x7f030003;
-        public static final int login=0x7f030004;
-        public static final int ti_adapter_item=0x7f030005;
-        public static final int verifica_criacao_tarefas=0x7f030006;
-        public static final int view_week=0x7f030007;
+        public static final int compare_adapter=0x7f030003;
+        public static final int compare_week=0x7f030004;
+        public static final int login=0x7f030005;
+        public static final int ti_adapter_item=0x7f030006;
+        public static final int verifica_criacao_tarefas=0x7f030007;
+        public static final int view_week=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -694,8 +697,8 @@ containing a value of this type.
         public static final int auth_client_play_services_err_notification_msg=0x7f040004;
         public static final int auth_client_requested_by_msg=0x7f040005;
         public static final int auth_client_using_bad_version_title=0x7f040000;
-        public static final int btn_logout_from_google=0x7f04002e;
-        public static final int btn_revoke_access=0x7f04002f;
+        public static final int btn_logout_from_google=0x7f040031;
+        public static final int btn_revoke_access=0x7f040032;
         public static final int cancel=0x7f040023;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
@@ -790,10 +793,13 @@ containing a value of this type.
         public static final int continar=0x7f040027;
         public static final int hours=0x7f040025;
         public static final int minutes=0x7f040026;
+        public static final int name=0x7f04002f;
         public static final int nome_ti=0x7f040029;
         public static final int ok=0x7f040022;
         public static final int prioridade=0x7f04002d;
+        public static final int proporcao=0x7f04002e;
         public static final int resumo_semanal=0x7f04002b;
+        public static final int time=0x7f040030;
         public static final int total_horas=0x7f04002c;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
