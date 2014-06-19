@@ -20,6 +20,10 @@ public class Data {
 		this.data = new GregorianCalendar(ano, mes, dia);
 	}
 	
+	public void getOntem(){
+		this.data.add(Calendar.DAY_OF_WEEK, -1);
+	}
+	
 	public static long convertDateToMilissegundos(Calendar data){
 		return data.getTimeInMillis();
 	}
