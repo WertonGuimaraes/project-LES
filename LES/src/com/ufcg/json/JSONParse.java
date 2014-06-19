@@ -127,5 +127,4 @@ public class JSONParse {
 		str = str.replace(antigo, novo);
 		return str;
 	}
-
 }

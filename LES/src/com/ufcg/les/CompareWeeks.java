@@ -56,6 +56,7 @@ public class CompareWeeks extends Activity /*implements OnItemClickListener*/{
 	
 	
 	public void geraGrafico(List<String> nomeDeTis){
+		maiorTempo = 0;
 		if(this.li == null){
 			this.li = (LineGraph)findViewById(R.id.graph);
 		}else{
