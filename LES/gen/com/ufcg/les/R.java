@@ -613,11 +613,13 @@ containing a value of this type.
     public static final class id {
         public static final int BotaoCancelar=0x7f060024;
         public static final int Button_AddTI=0x7f060017;
+        public static final int Button_AddTI2=0x7f060034;
         public static final int Comparative_view=0x7f060018;
         public static final int TextRelatorioSemanal=0x7f060019;
         public static final int TextTotalHoras=0x7f06001b;
         public static final int TotalHoras=0x7f06001c;
-        public static final int action_settings=0x7f060033;
+        public static final int Voltar=0x7f060035;
+        public static final int action_settings=0x7f060036;
         public static final int book_now=0x7f060010;
         public static final int botaoOK=0x7f060023;
         public static final int btn_revoke_access=0x7f06002b;
@@ -659,6 +661,7 @@ containing a value of this type.
         public static final int strict_sandbox=0x7f060009;
         public static final int tempo=0x7f060030;
         public static final int terrain=0x7f060003;
+        public static final int textView1=0x7f060033;
         public static final int txtEmail=0x7f060029;
         public static final int txtName=0x7f060028;
         public static final int vertical=0x7f060015;
@@ -674,7 +677,8 @@ containing a value of this type.
         public static final int compare_week=0x7f030003;
         public static final int login=0x7f030004;
         public static final int ti_adapter_item=0x7f030005;
-        public static final int view_week=0x7f030006;
+        public static final int verifica_criacao_tarefas=0x7f030006;
+        public static final int view_week=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
