@@ -34,7 +34,7 @@ public class Bar {
     private int mColor = 0xFF33B5E5;
     private int mLabelColor = -1;
     private int mSelectedColor = -1;
-    private int mValueColor = Color.WHITE;
+    private int mValueColor = Color.BLACK;
     private String mName = null;
     private float mValue;
     private String mValueString = null;

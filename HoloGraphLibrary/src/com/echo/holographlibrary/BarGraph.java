@@ -116,7 +116,7 @@ public class BarGraph extends View {
         final Resources resources = getContext().getResources();
 
         canvas.drawColor(Color.TRANSPARENT);
-        NinePatchDrawable popup = (NinePatchDrawable) resources.getDrawable(R.drawable.popup_black);
+       // NinePatchDrawable popup = (NinePatchDrawable) resources.getDrawable(R.drawable.popup_black);
 
         float maxValue = 0;
         float padding = 7 * resources.getDisplayMetrics().density;
@@ -247,10 +247,10 @@ public class BarGraph extends View {
                     boundRight = mBoundsRect.right + ((int) padding / 2);
                 }
 
-                if (mShowPopup) {
-                    popup.setBounds(boundLeft, boundTop, boundRight, mBoundsRect.top);
-                    popup.draw(canvas);
-                }
+//                if (mShowPopup) {
+//                    popup.setBounds(boundLeft, boundTop, boundRight, mBoundsRect.top);
+//                    popup.draw(canvas);
+//                }
 
                 // Check cache to see if we've done this calculation before
                 if (0 > valueTextSizes.indexOfKey(bar.getValueString().length())) {
