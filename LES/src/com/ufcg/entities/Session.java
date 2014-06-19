@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import util.Cor;
-
 import android.util.Log;
 
 public class Session {
@@ -14,6 +12,7 @@ public class Session {
 	private static Session instancia;
 	private String dono;
 	private List<Ti> atividades;
+	public boolean mensagemLida = false;
 
 	protected Session() {
 		atividades = new ArrayList<Ti>();
@@ -50,6 +49,20 @@ public class Session {
 			}
 		}
 		return resposta;
+	}
+	
+	/**
+	 * Verifica se o usuario criou alguma tarefa no dia anterior
+	 */
+	public boolean registrouTarefasOntem(){
+		mensagemLida = true;
+		Data ontem = new Data();
+		ontem.getOntem();
+		for (Ti ti : atividades){
+			if (ti.getData().getTime() == ontem.convertDateToMilissegundos())
+				return true;
+		}
+		return false;
 	}
 	
 	public List<Ti> atividadesDaSemanaPassada() {
