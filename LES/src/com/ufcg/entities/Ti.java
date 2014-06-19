@@ -7,7 +7,7 @@ public class Ti {
 	private String nome, foto, cor; 
 	private int tempo, prioridade;
 	private Date data;
-	
+	private boolean checked;
 	/**
 	 * @param nome
 	 * @param tempo
@@ -71,5 +71,13 @@ public class Ti {
 	
 	public void setCor(String cor) {
 		this.cor = cor;
+	}
+	
+	public boolean isChecked() {
+		return checked;
+	}
+	
+	public void setChecked(boolean checked) {
+		this.checked = checked;
 	}
 }

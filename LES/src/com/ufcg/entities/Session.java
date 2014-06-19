@@ -13,9 +13,11 @@ public class Session {
 	private String dono;
 	private List<Ti> atividades;
 	public boolean mensagemLida = false;
+	private List<String> isCheckedList;
 
 	protected Session() {
 		atividades = new ArrayList<Ti>();
+		isCheckedList = new ArrayList<String>();
 	}
 
 	public static Session getInstancia() {
@@ -27,6 +29,10 @@ public class Session {
 	
 	public static void delInstancia(){
 		instancia = null;
+	}
+	
+	public List<String> getIsCheckedList() {
+		return isCheckedList;
 	}
 	
 	public List<Ti> getAtividades() {
@@ -68,7 +74,17 @@ public class Session {
 	public List<Ti> atividadesDaSemanaPassada() {
 		List<Ti> resposta = new ArrayList<Ti>();
 		for (Ti ti : atividades) {
-			if(Data.is2SemanasPassada(ti.getData())){
+			if(Data.is2SemanasPassada(ti.getData(), 1)){
+				resposta.add(ti);
+			}
+		}
+		return resposta;
+	}
+	
+	public List<Ti> atividadesDaSemanaRetrasada() {
+		List<Ti> resposta = new ArrayList<Ti>();
+		for (Ti ti : atividades) {
+			if(Data.is2SemanasPassada(ti.getData(), 2)){
 				resposta.add(ti);
 			}
 		}
@@ -93,7 +109,6 @@ public class Session {
 		String cor = (new Cor()).getCor();
 		for (Ti ti : getAtividades()) {
 			if(ti.getNome().equals(nomeDaTi)){
-				Log.d("werton", ti.getFoto());
 				cor = ti.getFoto();
 				break;
 			}
@@ -111,4 +126,5 @@ public class Session {
 		}
 		return prior;
 	}
+
 }

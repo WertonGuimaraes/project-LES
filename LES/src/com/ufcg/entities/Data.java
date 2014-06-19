@@ -4,8 +4,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import android.util.Log;
-
 public class Data {
 	private Calendar data;
 
@@ -56,16 +54,17 @@ public class Data {
 		return estremo1 < dataParaComparacao &&  dataParaComparacao<= estremo2;
 	}
 	
-	public static boolean is2SemanasPassada(Date date){
+	public static boolean is2SemanasPassada(Date date, int semana){
 		Data dataAtual = new Data();
 		dataAtual.getData();
 		Integer dia  = dataAtual.getData().get(Calendar.DAY_OF_WEEK);
-		long estremo1 = convertDateToMilissegundos(somarData(-(dia + 14), dataAtual.getData()));
+		long estremo1 = convertDateToMilissegundos(somarData(-(dia + 7*semana), dataAtual.getData()));
 		long estremo2 = convertDateToMilissegundos(somarData(-(dia), dataAtual.getData()));
 		long dataParaComparacao = date.getTime();
 		
 		return estremo1 < dataParaComparacao &&  dataParaComparacao<= estremo2;
 	}
+
 	
 	
 }

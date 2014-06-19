@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/white"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context="com.ufcg.les.MainActivity" >
@@ -13,31 +13,16 @@
         android:layout_height="wrap_content"
         android:src="@drawable/nome_pequeno" />
 
-    <TextView
-        android:id="@+id/TextRelatorioSemanal"
+    <com.echo.holographlibrary.LineGraph
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/resumo_semanal"
-        android:textSize="20sp" />
-
-    <LinearLayout
+        android:layout_height="250dp"
+        android:id="@+id/graph"/>
+    
+    <ListView
+        android:id="@+id/listNamesTi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <com.echo.holographlibrary.PieGraph
-            android:id="@+id/graph"
-            android:layout_width="145dp"
-            android:layout_height="145dp" />
-        
-        <com.echo.holographlibrary.PieGraph
-            android:id="@+id/graph2"
-            android:layout_width="145dp"
-            android:layout_height="145dp" />
-    </LinearLayout>
-
-
+        android:layout_height="wrap_content" >
+    </ListView>
+    
 
 </LinearLayout>

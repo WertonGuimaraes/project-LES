@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.echo.holographlibrary.Bar;
+import com.echo.holographlibrary.BarGraph;
 import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
 import com.ufcg.entities.Data;
@@ -53,27 +55,47 @@ public class MainActivity extends Activity {
 			}
 		});
 		
+		Button compareWeeks = (Button) findViewById(R.id.Comparative_view);
+		compareWeeks.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,CompareWeeks.class);
+				startActivity(i);
+				finish();
+			}
+		});
 		
-		ListView list = (ListView) findViewById(R.id.listWeek);
 		
-		PieGraph pg = (PieGraph)findViewById(R.id.graph);
-		PieSlice slice;
+ListView list = (ListView) findViewById(R.id.listWeek);
+		
+		//PieGraph pg = (PieGraph)findViewById(R.id.graph);
+		//PieSlice slice;
 		List<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 		List<Ti> tiAdapter = new ArrayList<Ti>();
+		ArrayList<Bar> points = new ArrayList<Bar>();
 		int tempoTotal = 0;
 		
 		for (Entry<String, Integer> entry : Session.getInstancia().resumeAtividades(atividadesDaSemana).entrySet()) {
-			slice = new PieSlice();
-			Log.d("werton", entry.getKey());
+//			slice = new PieSlice();
 			String cor = "#"+Session.getInstancia().recuperaCor(entry.getKey());
-			Log.d("werton", cor);
+//			slice.setColor(Color.parseColor(cor));
+//			slice.setValue(entry.getValue());
+//			pg.addSlice(slice);
+			
+			Bar d = new Bar();
+			d.setColor(Color.parseColor(cor));
+			d.setName(entry.getKey());
+			d.setValue(entry.getValue());
+			
+			points.add(d);
+			
 			int prior = Session.getInstancia().recuperaPrioridade(entry.getKey());
-			slice.setColor(Color.parseColor(cor));
-			slice.setValue(entry.getValue());
 			tiAdapter.add(new Ti(entry.getKey(), entry.getValue(), (long) 0, "", prior, cor)); 
 			tempoTotal += entry.getValue();
-			pg.addSlice(slice);
+			
 		}
+		BarGraph g = (BarGraph)findViewById(R.id.graph);
+		g.setBars(points);
 		
 		TextView totalDeHoras = (TextView) findViewById(R.id.TotalHoras);
 		totalDeHoras.setText(String.format("%.2f", (float)tempoTotal/60));
@@ -82,8 +104,8 @@ public class MainActivity extends Activity {
 		list.setAdapter(adapter);
 		
 	}
-
-		// lembrar de fazer o ranking e propor��o de horas
+	
+	// lembrar de fazer o ranking e propor��o de horas
 		private Map retornaRanking() {
 			List<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 			Map<String, Integer> titempo = new HashMap<String, Integer>();
