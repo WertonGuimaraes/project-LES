@@ -25,11 +25,23 @@ import com.ufcg.entities.Ti;
 
 
 public class MainActivity extends Activity {
+	
+	private boolean registrouTarefaOntem;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//Verifica se o usuario registrou alguma atividade ontem
+		if(Session.getInstancia().mensagemLida == false){
+			registrouTarefaOntem = Session.getInstancia().registrouTarefasOntem();
+			if(!registrouTarefaOntem){
+				Intent i = new Intent(MainActivity.this,VerificaTarefasActivity.class);
+				startActivity(i);
+				finish();
+			}
+		}
 		
 		Button adicionarTI = (Button) findViewById(R.id.Button_AddTI);
 		adicionarTI.setOnClickListener(new View.OnClickListener() {
@@ -70,8 +82,8 @@ public class MainActivity extends Activity {
 		list.setAdapter(adapter);
 		
 	}
-	
-	// lembrar de fazer o ranking e propor��o de horas
+
+		// lembrar de fazer o ranking e propor��o de horas
 		private Map retornaRanking() {
 			List<Ti> atividadesDaSemana = Session.getInstancia().atividadesDaSemana();
 			Map<String, Integer> titempo = new HashMap<String, Integer>();
