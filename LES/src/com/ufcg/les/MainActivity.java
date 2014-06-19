@@ -29,11 +29,12 @@ import com.ufcg.entities.Ti;
 public class MainActivity extends Activity {
 	
 	private boolean registrouTarefaOntem;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 		
 		//Verifica se o usuario registrou alguma atividade ontem
 		if(Session.getInstancia().mensagemLida == false){

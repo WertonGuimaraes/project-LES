@@ -163,7 +163,7 @@ public class AdicionarTIActivity extends Activity {
 			cor = Session.getInstancia().recuperaCor(nome);
 			
 			nome = mudaCaractere(nome, " ", "_");
-			
+						
 			String url = "http://150.165.98.11:8080/povmt/atividade/salvarAtividade?dono=" + dono +	"&nome="
 					+ nome + "&tempo=" + tempo + "&data=" + data + "&prioridade=" + prioridade 
 					+"&foto=" + cor;

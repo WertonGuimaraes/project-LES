@@ -50,7 +50,7 @@ public class Session {
 	public List<Ti> atividadesDaSemana() {
 		List<Ti> resposta = new ArrayList<Ti>();
 		for (Ti ti : atividades) {
-			if(Data.isSemana(ti.getData())){
+			if(Data.isSemana(ti.getData(), 0)){
 				resposta.add(ti);
 			}
 		}
@@ -74,7 +74,7 @@ public class Session {
 	public List<Ti> atividadesDaSemanaPassada() {
 		List<Ti> resposta = new ArrayList<Ti>();
 		for (Ti ti : atividades) {
-			if(Data.is2SemanasPassada(ti.getData(), 1)){
+			if(Data.isSemana(ti.getData(), 1)){
 				resposta.add(ti);
 			}
 		}
@@ -84,7 +84,7 @@ public class Session {
 	public List<Ti> atividadesDaSemanaRetrasada() {
 		List<Ti> resposta = new ArrayList<Ti>();
 		for (Ti ti : atividades) {
-			if(Data.is2SemanasPassada(ti.getData(), 2)){
+			if(Data.isSemana(ti.getData(), 2)){
 				resposta.add(ti);
 			}
 		}
