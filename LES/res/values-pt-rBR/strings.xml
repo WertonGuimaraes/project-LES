@@ -15,6 +15,9 @@
     <string name="resumo_semanal">Resumo semanal</string>
     <string name="total_horas">Total de horas investidas: </string>
     <string name="prioridade">Prioridade: </string> 
+    <string name="proporcao">Proporção: </string> 
+    <string name="name">Nome: </string> 
+    <string name="time">Tempo (em minutos): </string>
 	<string-array name="priority_array">
 	  <item>Alta</item> 
 	  <item>Média</item> 

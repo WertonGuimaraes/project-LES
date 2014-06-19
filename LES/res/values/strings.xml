@@ -15,6 +15,10 @@
     <string name="resumo_semanal">Weekly summary</string>
     <string name="total_horas">Total of invested hours: </string>
     <string name="prioridade">Priority: </string> 
+    <string name="proporcao">Proportion: </string> 
+    <string name="name">Name: </string> 
+    <string name="time">Time (in minutes): </string> 
+    
 	<string-array name="priority_array">
   		<item>High</item> 
  		<item>Medium</item> 
