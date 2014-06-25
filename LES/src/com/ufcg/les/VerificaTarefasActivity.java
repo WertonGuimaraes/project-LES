@@ -22,8 +22,8 @@ public class VerificaTarefasActivity extends Activity {
 		adicionarTI = (Button)findViewById(R.id.Button_AddTI2);
 		adicionarTI.setOnClickListener(new View.OnClickListener() {
 			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(VerificaTarefasActivity.this,AdicionarTIActivity.class);
+			public void onClick(View v) { //addTiOntem
+				Intent i = new Intent(VerificaTarefasActivity.this,AdicionarTIDeOntem.class);
 				startActivity(i);
 				finish();
 			}
