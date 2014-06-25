@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
+    android:background="@drawable/back"
     tools:context="com.ufcg.les.MainActivity" >
 
     <ImageView
