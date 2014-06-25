@@ -24,6 +24,12 @@
  		<item>Medium</item> 
 		<item>Low</item> 
  	</string-array>
+ 	<string name="nao_add_ti_ontem">You did not add any task yesterday</string>
+ 	<string name="pagina_inicial">Main page</string>
+ 	
+ 	<string name="semana2">2 weeks</string>
+    <string name="semana1">1 week</string>
+    <string name="semana_atual">Current week</string>
     
     <string name="btn_logout_from_google">Logout from Google</string>
     <string name="btn_revoke_access">Revoke Access</string>

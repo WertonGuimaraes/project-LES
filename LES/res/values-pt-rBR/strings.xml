@@ -10,7 +10,7 @@
     <string name="minutes">Minutos</string>
     <string name="continar">Continuar</string>
     <string name="add_tempo_investido">Adicionar tempo investido</string>
-    <string name="nome_ti">Nome Ti</string>
+    <string name="nome_ti">Nome TI</string>
     <string name="compara_semana">Comparar semana</string>
     <string name="resumo_semanal">Resumo semanal</string>
     <string name="total_horas">Total de horas investidas: </string>
@@ -23,7 +23,13 @@
 	  <item>Média</item> 
 	  <item>Baixa</item> 
 	</string-array>
+    <string name="nao_add_ti_ontem">Você não adicionou nenhuma atividade ontem</string>
+    <string name="pagina_inicial">Página inicial</string>
     
+    <string name="semana2">2 semanas</string>
+    <string name="semana1">1 semana</string>
+    <string name="semana_atual">Semana Atual</string>
+	
     <string name="btn_logout_from_google">Sair do Google </string>
     <string name="btn_revoke_access">Revogar Acesso</string>
     
