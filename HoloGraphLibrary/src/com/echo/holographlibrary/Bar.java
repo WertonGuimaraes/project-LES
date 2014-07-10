@@ -36,7 +36,7 @@ public class Bar {
     private int mSelectedColor = -1;
     private int mValueColor = Color.BLACK;
     private String mName = null;
-    private float mValue;
+    private int mValue;
     private String mValueString = null;
 
     public int getColor() {
@@ -80,11 +80,11 @@ public class Bar {
         mName = name;
     }
 
-    public float getValue() {
+    public int getValue() {
         return mValue;
     }
 
-    public void setValue(float value) {
+    public void setValue(int value) {
         mValue = value;
     }
 

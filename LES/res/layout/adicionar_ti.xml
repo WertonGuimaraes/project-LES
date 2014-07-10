@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/background_blue"
     android:gravity="center|bottom"
     android:orientation="vertical"
     tools:context=".MainActivity" >
@@ -28,16 +28,17 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="@string/add_tempo_investido"
-            android:textSize="25sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="8dp"
             android:text="@string/nome_ti"
-            android:textSize="20sp" />
+            android:textSize="18sp" 
+            android:textColor="@color/white"/>
 
         <MultiAutoCompleteTextView
             android:id="@+id/name_ti"
@@ -45,7 +46,10 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:completionThreshold="3" />
+            android:completionThreshold="3"
+            android:maxLength="30"
+            android:focusableInTouchMode="true"/>
+        
         <LinearLayout 
             android:layout_width="wrap_content" 
             android:layout_height="wrap_content" 
@@ -57,17 +61,17 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
  			    android:layout_width="0dp" 
  			    android:layout_weight="0.60"
  			    android:layout_marginTop="15dp"
- 			    android:fontFamily="sans-serif-light"
- 			    android:textSize="20sp" 
+ 			    android:textSize="15sp" 
  			    android:text="@string/prioridade" 
- 			    android:layout_marginLeft="10dp" /> 
+ 			    android:layout_marginLeft="10dp"
+ 			    android:textColor="@color/white" /> 
 
   			<Spinner
   			    android:id="@+id/priority"
   			    android:layout_width="0dp"
   			    android:layout_height="wrap_content"
   			    android:layout_marginTop="15dp"
-  			    android:layout_weight="0.97" />
+  			    android:layout_weight="0.97"/>
  
   			</LinearLayout>
         
@@ -87,9 +91,9 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
             android:text="@string/hours"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/white" />
 
         <NumberPicker
             android:id="@+id/minutes"
@@ -100,9 +104,9 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
             android:text="@string/minutes"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <LinearLayout
@@ -116,14 +120,16 @@ android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/ok"/>
+            android:text="@string/ok"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/BotaoCancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/cancel" />
+            android:text="@string/cancel"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </LinearLayout>

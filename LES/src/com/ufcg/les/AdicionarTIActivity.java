@@ -31,7 +31,7 @@ import com.ufcg.json.JSONParse;
 public class AdicionarTIActivity extends Activity {
 	private static final String FOTO = null;
 	private static final String COR = null;
-	private static final int MAX_HOURS = 23, MAX_MINUTES = 60;
+	private static final int MAX_HOURS = 23, MAX_MINUTES = 59;
 	private String dono;
 	private int tempo;
 	private NumberPicker horas, minutos;

@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
-    android:background="@drawable/back"
+    android:background="@drawable/background_blue"
     tools:context="com.ufcg.les.MainActivity" >
-
+    
+    <!--
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/nome_pequeno" />
+    -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,15 +23,19 @@
 
         <Button
             android:id="@+id/Button_AddTI"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="@string/add_ti" />
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="@string/add_ti"
+            android:textSize="15sp"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/Comparative_view"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="@string/compara_semana" />
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="@string/compara_semana"
+            android:textSize="15sp"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
@@ -38,10 +44,11 @@
         android:id="@+id/TextRelatorioSemanal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/resumo_semanal"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,18 +70,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="@string/total_horas"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/TotalHoras"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
-            android:textColor="@color/black_text"
+            android:textColor="@color/white"
             android:textSize="22sp" />
     </LinearLayout>
 

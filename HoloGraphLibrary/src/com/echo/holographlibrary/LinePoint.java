@@ -30,8 +30,8 @@ public class LinePoint {
 
     private final Path mPath = new Path();
     private final Region mRegion = new Region();
-    private float mX;
-    private float mY;
+    private int mX;
+    private int mY;
     private int mColor = 0xFF000000;
     private int mSelectedColor = -1;
 
@@ -40,10 +40,10 @@ public class LinePoint {
     }
 
     public LinePoint(double x, double y) {
-        this((float) x, (float) y);
+        this((int) x, (int) y);
     }
 
-    public LinePoint(float x, float y) {
+    public LinePoint(int x, int y) {
         mX = x;
         mY = y;
     }
@@ -52,7 +52,7 @@ public class LinePoint {
         return mX;
     }
 
-    public void setX(float x) {
+    public void setX(int x) {
         mX = x;
     }
 
@@ -60,16 +60,16 @@ public class LinePoint {
         return mY;
     }
 
-    public void setY(float y) {
+    public void setY(int y) {
         mY = y;
     }
 
     public void setX(double x) {
-        mX = (float) x;
+        mX = (int) x;
     }
 
     public void setY(double y) {
-        mY = (float) y;
+        mY = (int) y;
     }
 
     public Region getRegion() {

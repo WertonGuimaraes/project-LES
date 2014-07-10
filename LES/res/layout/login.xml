@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     
-    android:background="@drawable/bg">
+    android:background="@drawable/background_blue">
 
     <ImageView
-        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -19,7 +18,7 @@
         android:id="@+id/llProfile"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
         android:weightSum="3"
         android:visibility="gone">
@@ -42,14 +41,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp"
+                android:textColor="@color/white" />
  
             <TextView
                 android:id="@+id/txtEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textSize="18dp" />
+                android:textSize="18sp" 
+                android:textColor="@color/white"/>
         </LinearLayout>
     </LinearLayout>
     
@@ -59,34 +60,39 @@
         android:orientation="vertical"
         android:gravity="center">
         
+        
         <com.google.android.gms.common.SignInButton
-        android:id="@+id/btn_sign_in"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp" >
-    </com.google.android.gms.common.SignInButton>
+            android:id="@+id/btn_sign_in"
+        	android:layout_gravity="center_horizontal"
+       		android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginBottom="10dp" >
+    	</com.google.android.gms.common.SignInButton>
+    	
     
     <Button
         android:id="@+id/buttonContinuar"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="@string/continar"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:textColor="@color/white"/>
     
     <Button
         android:id="@+id/btn_sign_out"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_logout_from_google"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:textColor="@color/white"/>
  
     <Button
         android:id="@+id/btn_revoke_access"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_revoke_access"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:textColor="@color/white"/>
     </LinearLayout>
    
 

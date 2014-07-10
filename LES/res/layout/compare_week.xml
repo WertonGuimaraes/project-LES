@@ -2,51 +2,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/background_blue"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context="com.ufcg.les.MainActivity" >
-
+    
+    <!--  
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/nome_pequeno" />
+    -->
 
     <com.echo.holographlibrary.LineGraph
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:id="@+id/graph"/>
     
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
         
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/semana2"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:layout_weight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="@color/white"/>
         
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/semana1"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:layout_weight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="@color/white"/>
         
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/semana_atual"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:layout_weight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="@color/white"/>
     </LinearLayout>
     
     <ListView

@@ -11,7 +11,7 @@
 
     <ImageView
         android:id="@+id/cor"
-        android:layout_width="26dp"
+        android:layout_width="20dp"
         android:layout_height="match_parent" />
 
     <LinearLayout
@@ -19,15 +19,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="15dp" >
+        android:paddingLeft="10dp" >
 
         <TextView
             android:id="@+id/nomeCompare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-           android:text="@string/name"
-            android:textColor="@color/black_text" />
+            android:text="@string/name"
+            android:textColor="@color/white" />
     </LinearLayout>
     
     <LinearLayout
@@ -35,8 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:gravity="right"
-        android:orientation="vertical"
-        android:paddingLeft="15dp" >
+        android:orientation="vertical" >
 
         <CheckBox
         android:id="@+id/check"

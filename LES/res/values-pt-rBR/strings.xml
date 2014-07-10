@@ -12,7 +12,7 @@
     <string name="add_tempo_investido">Adicionar tempo investido</string>
     <string name="nome_ti">Nome TI</string>
     <string name="compara_semana">Comparar semana</string>
-    <string name="resumo_semanal">Resumo semanal</string>
+    <string name="resumo_semanal">Resumo semanal (minutos):</string>
     <string name="total_horas">Total de horas investidas: </string>
     <string name="prioridade">Prioridade: </string> 
     <string name="proporcao">Proporção: </string> 

@@ -26,28 +26,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
-            android:textColor="@color/black_text" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/tempo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/time"
-            android:textColor="@color/black_text" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/prioridade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/prioridade"
-            android:textColor="@color/black_text" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/proporcao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/proporcao"
-            android:textColor="@color/black_text" />
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </LinearLayout>

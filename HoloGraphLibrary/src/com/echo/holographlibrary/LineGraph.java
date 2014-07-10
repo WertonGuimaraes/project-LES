@@ -409,6 +409,7 @@ public class LineGraph extends View {
                 mCanvas.drawPath(mPath, mPaint);
             }
             lineCount++;
+            mCanvas.drawColor(Color.WHITE);
         }
 
         // Draw x-axis line
