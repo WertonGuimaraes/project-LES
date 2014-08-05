@@ -1,0 +1,42 @@
+<project>
+    <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
+ 
+    <target name="findbugs">
+        <mkdir dir="reports" />
+        <findbugs home="/data/findbugs" output="xml" outputFile="reports/findbugs.xml" excludeFilter="findbugs-exclude.xml">
+            <auxClasspath path="${android.jar}" />
+            <class location="${out.dir}" />
+        </findbugs>
+    </target>
+ 
+    <taskdef resource="checkstyletask.properties" classpath="/data/checkstyle/checkstyle-5.7-all.jar"/>
+ 
+    <target name="checkstyle">
+        <checkstyle config="/data/checkstyle/sun_checks.xml" failonviolation="false">
+            <fileset dir="." includes="**/*.java"/>
+            <formatter type="xml" />
+            <formatter type="xml" toFile="checkstyle-result.xml" />
+        </checkstyle>
+    </target>
+ 
+    <path id="pmd.classpath">
+        <pathelement location="${build}"/>
+        <fileset dir="/data/pmd/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+ 
+    <target name="pmd">
+        <taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath"/>
+        <pmd shortFilenames="true">
+            <sourceLanguage name="java" version="1.6"/>
+                <ruleset>rulesets/java/design.xml</ruleset>
+                <ruleset>java-basic</ruleset>
+            <formatter type="xml" toFile="pmd.xml"/>
+            <fileset dir=".">
+                <include name="**/*.java"/>
+            </fileset>
+        </pmd>
+    </target>
+ 
+</project>
