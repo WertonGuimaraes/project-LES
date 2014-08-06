@@ -12,7 +12,7 @@
     <taskdef resource="checkstyletask.properties" classpath="/data/checkstyle/checkstyle-5.7-all.jar"/>
  
     <target name="checkstyle">
-        <checkstyle config="/data/checkstyle/sun_checks.xml" failonviolation="false">
+        <checkstyle config="/opt/checkstyle-5.7/sun_checks.xml" failonviolation="false">
             <fileset dir="." includes="**/*.java"/>
             <formatter type="xml" />
             <formatter type="xml" toFile="checkstyle-result.xml" />
