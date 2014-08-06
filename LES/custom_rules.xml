@@ -9,7 +9,7 @@
         </findbugs>
     </target>
  
-    <taskdef resource="checkstyletask.properties" classpath="/data/checkstyle/checkstyle-5.7-all.jar"/>
+    <taskdef resource="checkstyletask.properties" classpath="/opt/checkstyle-5.7/checkstyle-5.7-all.jar"/>
  
     <target name="checkstyle">
         <checkstyle config="/opt/checkstyle-5.7/sun_checks.xml" failonviolation="false">
@@ -21,7 +21,7 @@
  
     <path id="pmd.classpath">
         <pathelement location="${build}"/>
-        <fileset dir="/data/pmd/lib">
+        <fileset dir="/opt/pmd/lib">
             <include name="*.jar"/>
         </fileset>
     </path>
