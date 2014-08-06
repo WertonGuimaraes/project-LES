@@ -3,7 +3,7 @@
  
     <target name="findbugs">
         <mkdir dir="reports" />
-        <findbugs home="/data/findbugs" output="xml" outputFile="reports/findbugs.xml" excludeFilter="findbugs-exclude.xml">
+        <findbugs home="/opt/findbugs-3.0.0" output="xml" outputFile="reports/findbugs.xml" excludeFilter="findbugs-exclude.xml">
             <auxClasspath path="${android.jar}" />
             <class location="${out.dir}" />
         </findbugs>
